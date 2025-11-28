@@ -49,10 +49,9 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-[#f5f3ff]">
+    <section id="contact" className="py-20 bg-[#f5f3ff]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="font-display text-4xl md:text-5xl font-light text-[#2d1f4e] mb-4">
             Get in <span className="font-semibold italic text-[#5b21b6]">Touch</span>
           </h2>
@@ -61,22 +60,21 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Contact Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className="contact-card bg-white rounded-2xl p-8 shadow-lg border-l-4 border-l-[#5b21b6]"
+              className="contact-card bg-white rounded-xl p-5 shadow-md border-l-4 border-l-[#5b21b6]"
             >
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-xl bg-[rgba(91,33,182,0.1)] flex items-center justify-center flex-shrink-0">
-                  <info.icon className="w-6 h-6 text-[#5b21b6]" />
+              <div className="flex flex-col gap-3">
+                <div className="w-10 h-10 rounded-lg bg-[rgba(91,33,182,0.1)] flex items-center justify-center flex-shrink-0">
+                  <info.icon className="w-5 h-5 text-[#5b21b6]" />
                 </div>
                 <div>
-                  <h3 className="font-display text-2xl font-semibold text-[#2d1f4e] mb-3">
+                  <h3 className="font-display text-lg font-semibold text-[#2d1f4e] mb-2">
                     {info.title}
                   </h3>
-                  <div className="font-sans text-sm text-stone-600 leading-relaxed">
+                  <div className="font-sans text-xs text-stone-600 leading-relaxed">
                     {info.content}
                   </div>
                 </div>
