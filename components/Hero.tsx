@@ -18,7 +18,7 @@ export default function Hero() {
           Curated journeys to Europe&apos;s finest destinations and exclusive cruise experiences
         </p>
         <Link 
-          href="#destinations"
+          href="#book-with-us"
           className="inline-block bg-gradient-to-r from-[#c9a227] via-[#d4af37] to-[#f4d03f] text-[#2d1f4e] font-sans text-xs font-semibold tracking-[2px] uppercase px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
         >
           Explore Destinations
