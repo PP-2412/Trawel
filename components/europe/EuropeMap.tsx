@@ -23,123 +23,135 @@ export default function EuropeMap({ selectedCities }: Props) {
       </div>
 
       {/* Map Container */}
-      <div className="relative aspect-[4/3] bg-[#d4e9f7] p-4">
-        {/* Realistic Europe SVG Map */}
-        <svg viewBox="0 0 800 600" className="w-full h-full" style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.1))' }}>
+      <div className="relative aspect-[4/3] bg-[#b8d4e8] p-4">
+        <svg viewBox="0 0 800 600" className="w-full h-full">
           <defs>
-            <linearGradient id="landGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#f8f9fa', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#e9ecef', stopOpacity: 1 }} />
+            <linearGradient id="landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#e8f0e8" />
+              <stop offset="100%" stopColor="#d4e4d4" />
             </linearGradient>
           </defs>
           
-          {/* Background water */}
-          <rect x="0" y="0" width="800" height="600" fill="#d4e9f7" />
+          {/* ICELAND */}
+          <path d="M 85,50 L 100,45 L 120,48 L 135,55 L 140,68 L 135,80 L 120,85 L 100,83 L 85,75 L 80,62 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* NORWAY */}
+          <path d="M 320,30 L 340,25 L 360,30 L 380,40 L 395,55 L 405,75 L 410,100 L 405,130 L 395,155 L 380,175 L 365,185 L 350,188 L 335,185 L 320,175 L 310,160 L 305,140 L 300,115 L 300,90 L 305,65 L 315,45 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* SWEDEN */}
+          <path d="M 365,185 L 380,175 L 395,155 L 405,130 L 410,100 L 420,120 L 430,145 L 435,170 L 440,195 L 438,220 L 430,240 L 415,250 L 400,248 L 385,240 L 375,225 L 368,205 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* FINLAND */}
+          <path d="M 440,70 L 460,65 L 485,70 L 510,85 L 525,110 L 530,140 L 525,170 L 510,195 L 490,210 L 470,215 L 450,210 L 440,195 L 435,170 L 430,145 L 432,115 L 438,90 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* UNITED KINGDOM */}
+          <path d="M 185,160 L 200,155 L 215,158 L 228,165 L 235,178 L 238,195 L 235,215 L 225,235 L 210,245 L 195,248 L 180,245 L 170,235 L 165,220 L 163,200 L 168,180 L 178,165 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
           
-          {/* Portugal */}
-          <path
-            d="M180,380 L175,385 L170,395 L168,410 L170,425 L175,440 L178,450 L175,460 L180,465 L185,462 L190,455 L195,445 L198,430 L200,415 L198,400 L195,390 L188,382 L180,380 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
+          {/* Scotland extension */}
+          <path d="M 195,120 L 208,115 L 222,118 L 230,128 L 232,142 L 228,155 L 215,158 L 200,155 L 188,145 L 185,132 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* IRELAND */}
+          <path d="M 120,185 L 135,180 L 150,183 L 160,193 L 163,208 L 160,225 L 150,240 L 135,245 L 120,242 L 110,232 L 105,215 L 108,198 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* PORTUGAL */}
+          <path d="M 30,330 L 45,325 L 60,328 L 70,340 L 75,360 L 75,385 L 70,410 L 60,430 L 45,440 L 30,438 L 20,425 L 15,405 L 15,380 L 18,355 L 25,340 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* SPAIN */}
+          <path d="M 60,328 L 85,322 L 120,320 L 155,325 L 190,335 L 215,350 L 230,370 L 235,395 L 228,420 L 210,440 L 185,450 L 155,455 L 125,455 L 95,450 L 70,440 L 60,430 L 70,410 L 75,385 L 75,360 L 70,340 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* FRANCE */}
+          <path d="M 215,250 L 245,245 L 275,248 L 300,260 L 320,280 L 330,305 L 332,330 L 325,355 L 310,370 L 285,378 L 255,380 L 230,375 L 215,365 L 210,350 L 215,330 L 225,310 L 230,285 L 228,265 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* BELGIUM */}
+          <path d="M 270,220 L 288,218 L 305,222 L 315,235 L 312,250 L 300,260 L 285,258 L 272,248 L 268,235 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* NETHERLANDS */}
+          <path d="M 280,195 L 298,190 L 315,195 L 325,208 L 322,222 L 310,230 L 295,228 L 282,218 L 278,205 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* DENMARK */}
+          <path d="M 350,188 L 368,185 L 385,190 L 395,205 L 392,220 L 380,230 L 365,232 L 352,225 L 348,210 L 348,198 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* GERMANY */}
+          <path d="M 315,235 L 345,230 L 375,235 L 405,245 L 425,260 L 440,280 L 445,305 L 440,330 L 425,350 L 400,360 L 370,365 L 345,360 L 325,350 L 315,335 L 310,315 L 312,295 L 318,275 L 320,255 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* POLAND */}
+          <path d="M 445,220 L 475,215 L 510,220 L 540,235 L 560,255 L 568,280 L 565,305 L 550,325 L 525,335 L 495,338 L 470,330 L 450,315 L 440,295 L 440,270 L 443,245 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* CZECH REPUBLIC */}
+          <path d="M 425,260 L 450,255 L 475,260 L 490,275 L 488,295 L 475,310 L 455,315 L 435,310 L 425,295 L 423,278 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* AUSTRIA */}
+          <path d="M 400,290 L 425,285 L 455,288 L 480,295 L 495,310 L 490,328 L 475,340 L 450,343 L 425,338 L 405,328 L 395,310 L 397,300 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* SWITZERLAND */}
+          <path d="M 345,300 L 365,295 L 385,298 L 400,310 L 395,328 L 380,338 L 360,340 L 345,335 L 338,322 L 340,310 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* ITALY */}
+          <path d="M 360,340 L 385,335 L 410,340 L 430,355 L 440,375 L 445,400 L 440,430 L 428,460 L 410,485 L 390,505 L 375,515 L 360,518 L 348,512 L 340,495 L 338,470 L 342,445 L 350,420 L 358,395 L 360,370 L 355,355 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
           
-          {/* Spain */}
-          <path
-            d="M180,380 L195,375 L210,372 L230,370 L250,368 L270,365 L290,368 L305,375 L315,385 L325,395 L330,410 L328,425 L322,435 L310,445 L295,450 L280,452 L265,455 L250,458 L235,460 L220,462 L205,463 L190,462 L185,458 L180,450 L175,440 L180,430 L185,420 L190,410 L195,400 L198,390 L192,382 L180,380 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
+          {/* Sicily */}
+          <path d="M 390,540 L 410,535 L 430,540 L 440,555 L 435,568 L 418,575 L 398,572 L 385,560 L 387,548 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* SLOVENIA/CROATIA */}
+          <path d="M 425,338 L 445,335 L 468,340 L 485,352 L 495,370 L 492,388 L 480,405 L 460,415 L 440,413 L 425,400 L 418,380 L 420,360 L 423,348 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* HUNGARY */}
+          <path d="M 475,310 L 505,308 L 535,315 L 555,328 L 560,348 L 552,368 L 535,380 L 510,383 L 485,378 L 468,365 L 463,345 L 468,325 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* ROMANIA */}
+          <path d="M 535,315 L 565,310 L 595,318 L 615,335 L 625,360 L 620,390 L 605,415 L 580,428 L 555,430 L 535,420 L 520,400 L 520,375 L 525,350 L 532,330 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* BULGARIA */}
+          <path d="M 555,430 L 580,428 L 605,435 L 625,450 L 630,470 L 620,488 L 600,498 L 575,498 L 555,488 L 545,470 L 545,450 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* GREECE */}
+          <path d="M 520,470 L 545,465 L 570,470 L 590,485 L 600,510 L 595,540 L 580,565 L 555,575 L 530,573 L 510,558 L 500,535 L 505,510 L 512,490 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
           
-          {/* France */}
-          <path
-            d="M315,385 L330,380 L345,375 L360,370 L375,365 L390,362 L405,360 L415,355 L420,345 L418,330 L410,320 L400,315 L385,312 L370,315 L355,320 L345,328 L340,340 L338,355 L342,370 L350,380 L358,385 L368,388 L378,392 L385,400 L388,415 L385,430 L378,440 L365,445 L350,448 L335,445 L322,438 L315,428 L312,415 L315,400 L315,385 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* United Kingdom */}
-          <path
-            d="M340,240 L348,235 L358,232 L368,230 L378,232 L385,238 L388,248 L385,258 L380,268 L372,275 L362,278 L352,280 L345,285 L340,290 L335,285 L332,275 L330,265 L332,255 L337,245 L340,240 Z M365,250 L372,248 L378,252 L380,260 L375,268 L368,270 L362,266 L360,258 L365,250 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* Netherlands */}
-          <path
-            d="M395,265 L402,262 L410,260 L418,262 L423,268 L425,278 L422,288 L415,295 L405,298 L395,295 L390,288 L388,278 L390,270 L395,265 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* Belgium */}
-          <path
-            d="M390,288 L398,285 L408,283 L418,285 L423,292 L420,302 L412,308 L402,310 L392,307 L387,300 L388,292 L390,288 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* Germany */}
-          <path
-            d="M418,262 L435,258 L452,255 L468,255 L482,258 L495,265 L502,275 L505,290 L502,305 L495,318 L485,328 L472,335 L458,338 L445,335 L432,328 L425,318 L420,305 L418,290 L420,275 L418,262 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* Switzerland */}
-          <path
-            d="M405,360 L418,358 L432,357 L445,360 L452,368 L450,378 L442,385 L430,388 L418,385 L408,378 L405,368 L405,360 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* Austria */}
-          <path
-            d="M445,335 L462,332 L478,330 L492,332 L505,338 L512,348 L510,358 L502,365 L488,368 L472,368 L458,365 L448,358 L445,348 L445,335 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* Italy */}
-          <path
-            d="M430,388 L442,385 L455,383 L468,382 L478,385 L485,392 L488,405 L485,418 L480,432 L472,445 L462,458 L452,468 L442,475 L432,478 L425,475 L420,468 L418,455 L420,442 L425,428 L432,415 L438,402 L438,392 L430,388 Z M465,470 L472,468 L478,472 L480,482 L475,492 L468,495 L460,492 L455,485 L458,475 L465,470 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* Czech Republic */}
-          <path
-            d="M472,300 L488,298 L502,300 L512,308 L515,318 L510,328 L498,335 L485,335 L472,330 L468,320 L470,310 L472,300 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* Croatia */}
-          <path
-            d="M502,365 L518,363 L532,365 L542,372 L545,385 L540,398 L530,408 L518,412 L505,410 L495,402 L492,390 L495,378 L502,365 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
-          {/* Greece */}
-          <path
-            d="M540,440 L552,438 L565,440 L575,448 L580,460 L578,475 L570,485 L558,490 L545,488 L535,480 L532,468 L535,455 L540,440 Z M568,495 L575,493 L582,497 L585,508 L580,518 L572,520 L565,515 L563,505 L568,495 Z"
-            fill="url(#landGradient)"
-            stroke="#94a3b8"
-            strokeWidth="1.5"
-          />
-          
+          {/* Greek Islands */}
+          <path d="M 540,540 L 555,538 L 568,545 L 570,558 L 560,568 L 545,568 L 535,558 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* UKRAINE */}
+          <path d="M 565,255 L 600,248 L 635,255 L 670,270 L 695,290 L 708,315 L 710,345 L 700,375 L 680,400 L 655,415 L 625,420 L 600,415 L 580,400 L 568,380 L 560,355 L 558,325 L 562,295 L 565,270 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* BELARUS */}
+          <path d="M 540,195 L 570,190 L 600,195 L 625,210 L 645,230 L 650,255 L 640,280 L 620,295 L 595,298 L 570,292 L 550,275 L 540,250 L 538,220 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* BALTIC STATES */}
+          <path d="M 490,150 L 520,145 L 550,152 L 575,168 L 585,190 L 580,215 L 560,230 L 535,235 L 510,228 L 490,210 L 485,185 L 488,165 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
+          {/* SLOVAKIA */}
+          <path d="M 475,285 L 500,282 L 525,288 L 540,302 L 535,318 L 520,328 L 500,330 L 480,323 L 470,308 L 472,295 Z" 
+            fill="url(#landGrad)" stroke="#8b9a8b" strokeWidth="1"/>
+
           {/* Connection Lines */}
           {selectedCities.length > 1 && selectedCities.map((city, index) => {
             if (index === selectedCities.length - 1) return null
@@ -156,7 +168,6 @@ export default function EuropeMap({ selectedCities }: Props) {
                   strokeDasharray="8,5"
                   opacity="0.5"
                 />
-                {/* Arrow */}
                 <defs>
                   <marker
                     id={`arrow-${index}`}
@@ -187,7 +198,7 @@ export default function EuropeMap({ selectedCities }: Props) {
           {/* City Markers */}
           {selectedCities.map((city, index) => (
             <g key={city.id}>
-              {/* Pulse animation ring */}
+              {/* Pulse animation */}
               <circle
                 cx={city.coordinates.x}
                 cy={city.coordinates.y}
@@ -197,73 +208,27 @@ export default function EuropeMap({ selectedCities }: Props) {
                 strokeWidth="2"
                 opacity="0.4"
               >
-                <animate
-                  attributeName="r"
-                  from="12"
-                  to="25"
-                  dur="2s"
-                  repeatCount="indefinite"
-                />
-                <animate
-                  attributeName="opacity"
-                  from="0.6"
-                  to="0"
-                  dur="2s"
-                  repeatCount="indefinite"
-                />
+                <animate attributeName="r" from="12" to="25" dur="2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite"/>
               </circle>
               
               {/* Pin shadow */}
-              <ellipse
-                cx={city.coordinates.x}
-                cy={city.coordinates.y + 22}
-                rx="8"
-                ry="3"
-                fill="#000"
-                opacity="0.2"
-              />
+              <ellipse cx={city.coordinates.x} cy={city.coordinates.y + 22} rx="8" ry="3" fill="#000" opacity="0.2"/>
               
               {/* Map pin */}
               <g transform={`translate(${city.coordinates.x}, ${city.coordinates.y})`}>
-                <path
-                  d="M 0,-18 C -7,-18 -12,-13 -12,-6 C -12,2 0,18 0,18 C 0,18 12,2 12,-6 C 12,-13 7,-18 0,-18 Z"
-                  fill="#5b21b6"
-                  stroke="white"
-                  strokeWidth="2"
-                />
-                <circle
-                  cx="0"
-                  cy="-6"
-                  r="5"
-                  fill="white"
-                />
+                <path d="M 0,-18 C -7,-18 -12,-13 -12,-6 C -12,2 0,18 0,18 C 0,18 12,2 12,-6 C 12,-13 7,-18 0,-18 Z"
+                  fill="#5b21b6" stroke="white" strokeWidth="2"/>
+                <circle cx="0" cy="-6" r="5" fill="white"/>
               </g>
               
               {/* Order number */}
-              <text
-                x={city.coordinates.x}
-                y={city.coordinates.y - 3}
-                textAnchor="middle"
-                fill="#5b21b6"
-                fontSize="14"
-                fontWeight="bold"
-                fontFamily="sans-serif"
-              >
-                {index + 1}
-              </text>
+              <text x={city.coordinates.x} y={city.coordinates.y - 3} textAnchor="middle" fill="#5b21b6" 
+                fontSize="14" fontWeight="bold" fontFamily="sans-serif">{index + 1}</text>
               
-              {/* City name label */}
-              <text
-                x={city.coordinates.x}
-                y={city.coordinates.y + 32}
-                textAnchor="middle"
-                fill="#2d1f4e"
-                fontSize="12"
-                fontWeight="600"
-                fontFamily="sans-serif"
-              >
-                {city.city}
-              </text>
+              {/* City name */}
+              <text x={city.coordinates.x} y={city.coordinates.y + 32} textAnchor="middle" fill="#2d1f4e" 
+                fontSize="12" fontWeight="600" fontFamily="sans-serif">{city.city}</text>
             </g>
           ))}
         </svg>
@@ -273,10 +238,7 @@ export default function EuropeMap({ selectedCities }: Props) {
           <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-md">
             <div className="flex flex-wrap gap-2">
               {selectedCities.map((city, index) => (
-                <span 
-                  key={city.id}
-                  className="inline-flex items-center gap-1.5 px-2 py-1 bg-[#f5f3ff] rounded-full font-sans text-xs"
-                >
+                <span key={city.id} className="inline-flex items-center gap-1.5 px-2 py-1 bg-[#f5f3ff] rounded-full font-sans text-xs">
                   <span className="w-4 h-4 bg-[#5b21b6] text-white rounded-full text-[10px] flex items-center justify-center font-bold">
                     {index + 1}
                   </span>
