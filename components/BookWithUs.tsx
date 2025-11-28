@@ -1,0 +1,88 @@
+'use client'
+
+import { Mountain, Anchor, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
+
+const bookingOptions = [
+  {
+    id: 'europe',
+    icon: Mountain,
+    title: 'Europe',
+    description: 'Discover the charm of historic cities, breathtaking landscapes, and rich cultural heritage across the continent.',
+    destinations: ['Paris', 'Rome', 'Barcelona', 'Santorini', 'Swiss Alps'],
+    image: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80',
+  },
+  {
+    id: 'cruises',
+    icon: Anchor,
+    title: 'Cruises',
+    description: 'Set sail on luxury vessels through the Mediterranean, Caribbean, and beyond with world-class amenities.',
+    destinations: ['Mediterranean', 'Caribbean', 'Norwegian Fjords', 'Greek Islands'],
+    image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?w=800&q=80',
+  },
+]
+
+export default function BookWithUs() {
+  return (
+    <section id="book-with-us" className="py-24 bg-gradient-to-b from-white to-[#f5f3ff]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="text-center mb-16">
+          <h2 className="font-display text-4xl md:text-5xl font-light text-[#2d1f4e] mb-4">
+            Book With <span className="font-semibold italic text-[#5b21b6]">Us</span>
+          </h2>
+          <p className="font-sans text-stone-500 tracking-wider">
+            Choose your <span className="text-[#c9a227] font-medium">Dream</span> Destination
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {bookingOptions.map((option) => (
+            <div
+              key={option.id}
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-[#ede9fe] hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${option.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2d1f4e]/80 to-transparent" />
+                <div className="absolute bottom-4 left-6 flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <option.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-display text-3xl font-semibold text-white">
+                    {option.title}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="p-6">
+                <p className="font-sans text-sm text-stone-600 leading-relaxed mb-4">
+                  {option.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {option.destinations.map((dest, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-[#f5f3ff] text-[#5b21b6] font-sans text-xs rounded-full"
+                    >
+                      {dest}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  href={`#${option.id}`}
+                  className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#5b21b6] hover:text-[#7c3aed] transition-colors group/btn"
+                >
+                  Explore {option.title}
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
