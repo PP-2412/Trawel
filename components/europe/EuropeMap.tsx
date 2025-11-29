@@ -8,10 +8,10 @@ type Props = {
 
 export default function EuropeMap({ selectedCities }: Props) {
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-[#ede9fe] overflow-hidden sticky top-28">
+    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden sticky top-28">
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#5b21b6] to-[#7c3aed] px-6 py-4">
-        <h2 className="font-display text-xl font-semibold text-white">
+      <div className="bg-gradient-to-r from-[#121d3d] to-[#43124a] px-6 py-4">
+        <h2 className="font-display text-xl text-white">
           Your Route
         </h2>
         <p className="font-sans text-xs text-white/70 mt-1">
@@ -163,7 +163,7 @@ export default function EuropeMap({ selectedCities }: Props) {
                   y1={city.coordinates.y}
                   x2={nextCity.coordinates.x}
                   y2={nextCity.coordinates.y}
-                  stroke="#5b21b6"
+                  stroke="#121d3d"
                   strokeWidth="3"
                   strokeDasharray="8,5"
                   opacity="0.5"
@@ -178,7 +178,7 @@ export default function EuropeMap({ selectedCities }: Props) {
                     markerHeight="6"
                     orient="auto"
                   >
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#5b21b6" />
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#121d3d" />
                   </marker>
                 </defs>
                 <line
@@ -186,7 +186,7 @@ export default function EuropeMap({ selectedCities }: Props) {
                   y1={city.coordinates.y}
                   x2={nextCity.coordinates.x}
                   y2={nextCity.coordinates.y}
-                  stroke="#5b21b6"
+                  stroke="#121d3d"
                   strokeWidth="2"
                   opacity="0.7"
                   markerEnd={`url(#arrow-${index})`}
@@ -204,7 +204,7 @@ export default function EuropeMap({ selectedCities }: Props) {
                 cy={city.coordinates.y}
                 r="15"
                 fill="none"
-                stroke="#5b21b6"
+                stroke="#121d3d"
                 strokeWidth="2"
                 opacity="0.4"
               >
@@ -218,16 +218,16 @@ export default function EuropeMap({ selectedCities }: Props) {
               {/* Map pin */}
               <g transform={`translate(${city.coordinates.x}, ${city.coordinates.y})`}>
                 <path d="M 0,-18 C -7,-18 -12,-13 -12,-6 C -12,2 0,18 0,18 C 0,18 12,2 12,-6 C 12,-13 7,-18 0,-18 Z"
-                  fill="#5b21b6" stroke="white" strokeWidth="2"/>
+                  fill="#121d3d" stroke="white" strokeWidth="2"/>
                 <circle cx="0" cy="-6" r="5" fill="white"/>
               </g>
               
               {/* Order number */}
-              <text x={city.coordinates.x} y={city.coordinates.y - 3} textAnchor="middle" fill="#5b21b6" 
+              <text x={city.coordinates.x} y={city.coordinates.y - 3} textAnchor="middle" fill="#121d3d" 
                 fontSize="14" fontWeight="bold" fontFamily="sans-serif">{index + 1}</text>
               
               {/* City name */}
-              <text x={city.coordinates.x} y={city.coordinates.y + 32} textAnchor="middle" fill="#2d1f4e" 
+              <text x={city.coordinates.x} y={city.coordinates.y + 32} textAnchor="middle" fill="#121d3d" 
                 fontSize="12" fontWeight="600" fontFamily="sans-serif">{city.city}</text>
             </g>
           ))}
@@ -238,8 +238,8 @@ export default function EuropeMap({ selectedCities }: Props) {
           <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-md">
             <div className="flex flex-wrap gap-2">
               {selectedCities.map((city, index) => (
-                <span key={city.id} className="inline-flex items-center gap-1.5 px-2 py-1 bg-[#f5f3ff] rounded-full font-sans text-xs">
-                  <span className="w-4 h-4 bg-[#5b21b6] text-white rounded-full text-[10px] flex items-center justify-center font-bold">
+                <span key={city.id} className="inline-flex items-center gap-1.5 px-2 py-1 bg-[#f5f5f5] rounded-full font-sans text-xs">
+                  <span className="w-4 h-4 bg-[#121d3d] text-white rounded-full text-[10px] flex items-center justify-center font-bold">
                     {index + 1}
                   </span>
                   {city.city}
@@ -252,7 +252,7 @@ export default function EuropeMap({ selectedCities }: Props) {
         {/* Empty State */}
         {selectedCities.length === 0 && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="font-sans text-sm text-stone-400 bg-white/80 px-4 py-2 rounded-lg">
+            <p className="font-sans text-sm text-[#44618b] bg-white/80 px-4 py-2 rounded-lg">
               Your selected cities will appear here
             </p>
           </div>
