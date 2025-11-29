@@ -24,14 +24,14 @@ const bookingOptions = [
 
 export default function BookWithUs() {
   return (
-    <section id="book-with-us" className="py-24 bg-gradient-to-b from-white to-[#f5f3ff]">
+    <section id="book-with-us" className="py-24 bg-gradient-to-b from-white to-[#f5f5f5]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-light text-[#2d1f4e] mb-4">
-            Book With <span className="font-semibold italic text-[#5b21b6]">Us</span>
+          <h2 className="font-display text-4xl md:text-5xl text-[#121d3d] mb-4">
+            Book With <span className="font-accent text-[#d19457]">Us</span>
           </h2>
-          <p className="font-sans text-stone-500 tracking-wider">
-            Choose your <span className="text-[#c9a227] font-medium">Dream</span> Destination
+          <p className="font-sans text-[#44618b] tracking-wider">
+            Choose your <span className="text-[#d19457] font-medium">Dream</span> Destination
           </p>
         </div>
 
@@ -39,33 +39,33 @@ export default function BookWithUs() {
           {bookingOptions.map((option) => (
             <div
               key={option.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-[#ede9fe] hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
               <div className="relative h-48 overflow-hidden">
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${option.image})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2d1f4e]/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#121d3d]/80 to-transparent" />
                 <div className="absolute bottom-4 left-6 flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                     <option.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-display text-3xl font-semibold text-white">
+                  <h3 className="font-display text-3xl text-white">
                     {option.title}
                   </h3>
                 </div>
               </div>
 
               <div className="p-6">
-                <p className="font-sans text-sm text-stone-600 leading-relaxed mb-4">
+                <p className="font-sans text-sm text-[#44618b] leading-relaxed mb-4">
                   {option.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {option.destinations.map((dest, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-[#f5f3ff] text-[#5b21b6] font-sans text-xs rounded-full"
+                      className="px-3 py-1 bg-[#f5f5f5] text-[#121d3d] font-sans text-xs rounded-full"
                     >
                       {dest}
                     </span>
@@ -73,7 +73,7 @@ export default function BookWithUs() {
                 </div>
                 <Link
                   href={option.id === 'europe' ? '/europe' : `/cruises`}
-                  className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#5b21b6] hover:text-[#7c3aed] transition-colors group/btn"
+                  className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#d19457] hover:text-[#c77e36] transition-colors group/btn"
                 >
                   Explore {option.title}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
