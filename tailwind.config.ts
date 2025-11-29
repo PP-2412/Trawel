@@ -16,6 +16,7 @@ const config: Config = {
           gold: '#d19457',
         },
         supporting: {
+          darkest: '#230c33',
           'purple-dark': '#43124a',
           'purple-light': '#8550a2',
           blue: '#44618b',
