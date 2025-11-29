@@ -38,27 +38,27 @@ export default function CruiseBuilder() {
   }
 
   return (
-    <section className="pt-28 pb-20 min-h-screen bg-gradient-to-b from-[#f5f3ff] to-white">
+    <section className="pt-28 pb-20 min-h-screen bg-gradient-to-b from-[#f5f5f5] to-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="font-display text-4xl md:text-6xl font-light text-[#2d1f4e] mb-4">
-            Set Sail on Your <span className="font-semibold italic text-[#5b21b6]">Dream Cruise</span>
+          <h1 className="font-display text-4xl md:text-6xl text-[#12103d] mb-4">
+            Set Sail on Your <span className="font-accent text-[#d19457]">Dream Cruise</span>
           </h1>
-          <p className="font-sans text-stone-500 tracking-wider max-w-2xl mx-auto">
+          <p className="font-sans text-[#44618b] tracking-wider max-w-2xl mx-auto">
             Discover world-class cruise experiences - from family adventures to luxury voyages across the globe
           </p>
         </div>
 
         {/* Mode Toggle */}
         <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-full p-1.5 shadow-lg border border-[#ede9fe] inline-flex">
+          <div className="bg-white rounded-full p-1.5 shadow-lg border border-gray-200 inline-flex">
             <button
               onClick={() => { setMode('browse'); setSelectedCruise(null); setShowItinerary(false); }}
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-sans text-sm font-medium transition-all duration-300 ${
                 mode === 'browse'
-                  ? 'bg-[#5b21b6] text-white shadow-md'
-                  : 'text-stone-600 hover:text-[#5b21b6]'
+                  ? 'bg-[#12103d] text-white shadow-md'
+                  : 'text-[#44618b] hover:text-[#12103d]'
               }`}
             >
               <Anchor className="w-4 h-4" />
@@ -68,8 +68,8 @@ export default function CruiseBuilder() {
               onClick={() => { setMode('packages'); setSelectedCruise(null); setShowItinerary(false); }}
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-sans text-sm font-medium transition-all duration-300 ${
                 mode === 'packages'
-                  ? 'bg-[#5b21b6] text-white shadow-md'
-                  : 'text-stone-600 hover:text-[#5b21b6]'
+                  ? 'bg-[#12103d] text-white shadow-md'
+                  : 'text-[#44618b] hover:text-[#12103d]'
               }`}
             >
               <Package className="w-4 h-4" />
@@ -106,12 +106,12 @@ export default function CruiseBuilder() {
           <div className="mt-12 text-center">
             <button
               onClick={handleGenerateItinerary}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#5b21b6] to-[#7c3aed] text-white font-sans text-sm font-semibold tracking-wider uppercase px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#12103d] to-[#43124a] text-white font-sans text-sm font-semibold tracking-wider uppercase px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <Sparkles className="w-5 h-5" />
               View Cruise Details & Book
             </button>
-            <p className="font-sans text-xs text-stone-400 mt-3">
+            <p className="font-sans text-xs text-[#44618b] mt-3">
               {selectedCruise.name} • {selectedCruise.nights} nights • From ${selectedCruise.price}/person
             </p>
           </div>
