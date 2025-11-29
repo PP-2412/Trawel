@@ -71,7 +71,7 @@ export default function PreMadePackages({ selectedCities, setSelectedCities }: P
 
   return (
     <div className="space-y-4">
-      <h2 className="font-display text-2xl font-semibold text-[#2d1f4e] mb-6">
+      <h2 className="font-display text-2xl font-semibold text-[#12103d] mb-6">
         Choose a Package
       </h2>
       
@@ -83,27 +83,27 @@ export default function PreMadePackages({ selectedCities, setSelectedCities }: P
             key={pkg.id}
             onClick={() => selectPackage(pkg)}
             className={`relative bg-white rounded-2xl p-6 shadow-lg border-2 cursor-pointer transition-all duration-300 hover:shadow-xl ${
-              isSelected ? 'border-[#5b21b6] ring-4 ring-[#5b21b6]/10' : 'border-[#ede9fe] hover:border-[#a78bfa]'
+              isSelected ? 'border-[#12103d] ring-4 ring-[#12103d]/10' : 'border-gray-200 hover:border-[#8550a2]'
             }`}
           >
             {/* Tag */}
             <span className={`absolute -top-3 left-4 px-3 py-1 text-xs font-sans font-semibold rounded-full ${
-              isSelected ? 'bg-[#5b21b6] text-white' : 'bg-[#fbbf24] text-[#2d1f4e]'
+              isSelected ? 'bg-[#12103d] text-white' : 'bg-[#d19457] text-white'
             }`}>
               {pkg.tag}
             </span>
 
             {/* Selected Check */}
             {isSelected && (
-              <div className="absolute top-4 right-4 w-8 h-8 bg-[#5b21b6] rounded-full flex items-center justify-center">
+              <div className="absolute top-4 right-4 w-8 h-8 bg-[#12103d] rounded-full flex items-center justify-center">
                 <Check className="w-5 h-5 text-white" />
               </div>
             )}
 
             <div className="flex items-start justify-between mt-2">
               <div>
-                <h3 className="font-display text-xl font-semibold text-[#2d1f4e]">{pkg.name}</h3>
-                <p className="font-sans text-sm text-[#5b21b6] font-medium mt-1">{pkg.duration}</p>
+                <h3 className="font-display text-xl font-semibold text-[#12103d]">{pkg.name}</h3>
+                <p className="font-sans text-sm text-[#43124a] font-medium mt-1">{pkg.duration}</p>
               </div>
             </div>
 
@@ -112,11 +112,11 @@ export default function PreMadePackages({ selectedCities, setSelectedCities }: P
               {pkg.cities.map((city) => (
                 <span
                   key={city.id}
-                  className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#f5f3ff] rounded-full font-sans text-xs text-[#2d1f4e]"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#f5f5f5] rounded-full font-sans text-xs text-[#12103d]"
                 >
-                  <span className="text-[10px] text-stone-400">{city.countryCode}</span>
+                  <span className="text-[10px] text-[#44618b]">{city.countryCode}</span>
                   {city.city}
-                  <span className="text-[#5b21b6] font-semibold">({city.nights}N)</span>
+                  <span className="text-[#43124a] font-semibold">({city.nights}N)</span>
                 </span>
               ))}
             </div>
