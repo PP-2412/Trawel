@@ -52,7 +52,7 @@ export default function Reviews() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl text-[#121d3d] mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-[#12103d] mb-4">
             What Our <span className="font-accent text-[#d19457]">Guests</span> Say
           </h2>
           <p className="font-sans text-[#44618b] tracking-wider">
@@ -76,17 +76,17 @@ export default function Reviews() {
             </div>
 
             {/* Review text */}
-            <p className="font-sans text-2xl md:text-3xl leading-relaxed mb-10 text-[#121d3d] italic">
+            <p className="font-sans text-2xl md:text-3xl leading-relaxed mb-10 text-[#12103d] italic">
               &ldquo;{review.text}&rdquo;
             </p>
 
             {/* Author */}
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-[#121d3d] flex items-center justify-center text-white font-sans font-semibold text-lg">
+              <div className="w-14 h-14 rounded-full bg-[#12103d] flex items-center justify-center text-white font-sans font-semibold text-lg">
                 {review.avatar}
               </div>
               <div>
-                <h4 className="font-display text-xl text-[#121d3d]">
+                <h4 className="font-display text-xl text-[#12103d]">
                   {review.name}
                 </h4>
                 <p className="font-sans text-sm text-[#44618b]">{review.location}</p>
@@ -111,7 +111,7 @@ export default function Reviews() {
                   onClick={() => setCurrentReview(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === currentReview
-                      ? 'w-8 bg-[#121d3d]'
+                      ? 'w-8 bg-[#12103d]'
                       : 'w-2 bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to review ${index + 1}`}
