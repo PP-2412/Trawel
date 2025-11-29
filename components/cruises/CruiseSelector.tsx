@@ -139,14 +139,14 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
     const hasHalfStar = rating % 1 !== 0
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)
+      stars.push(<Star key={i} className="w-4 h-4 fill-[#d19457] text-[#d19457]" />)
     }
     if (hasHalfStar) {
       stars.push(
         <div key="half" className="relative">
-          <Star className="w-4 h-4 text-amber-400" />
+          <Star className="w-4 h-4 text-[#d19457]" />
           <div className="absolute inset-0 overflow-hidden w-1/2">
-            <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+            <Star className="w-4 h-4 fill-[#d19457] text-[#d19457]" />
           </div>
         </div>
       )
@@ -157,7 +157,7 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
   return (
     <div className="space-y-6">
       {/* Search and Filter */}
-      <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-4">
+      <div className="bg-white rounded-2xl shadow-lg border border-[#12103d]/10 p-4">
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#44618b]" />
@@ -166,13 +166,13 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
               placeholder="Search cruises..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-[#f5f5f5] border border-gray-200 rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#12103d]/20 focus:border-[#12103d]"
+              className="w-full pl-10 pr-4 py-3 bg-white/95 border border-[#12103d]/10 rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#12103d]/20 focus:border-[#12103d]"
             />
           </div>
           <select
             value={filterDestination}
             onChange={(e) => setFilterDestination(e.target.value)}
-            className="px-4 py-3 bg-[#f5f5f5] border border-gray-200 rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#12103d]/20 focus:border-[#12103d] min-w-[180px]"
+            className="px-4 py-3 bg-white/95 border border-[#12103d]/10 rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#12103d]/20 focus:border-[#12103d] min-w-[180px]"
           >
             <option value="all">All Destinations</option>
             {allDestinations.map(dest => (
@@ -192,7 +192,7 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
               key={cruise.id}
               onClick={() => setSelectedCruise(cruise)}
               className={`bg-white rounded-2xl overflow-hidden shadow-lg border-2 cursor-pointer transition-all duration-300 hover:shadow-xl ${
-                isSelected ? 'border-[#12103d] ring-4 ring-[#12103d]/10' : 'border-gray-200 hover:border-[#8550a2]'
+                isSelected ? 'border-[#12103d] ring-4 ring-[#12103d]/10' : 'border-[#12103d]/10 hover:border-[#8550a2]'
               }`}
             >
               {/* Image */}
@@ -245,7 +245,7 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
                 </div>
 
                 {/* Price */}
-                <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-between">
+                <div className="mt-4 pt-4 border-t border-[#12103d]/10 flex items-center justify-between">
                   <div>
                     <span className="font-display text-xl font-bold text-[#d19457]">From ${cruise.price}</span>
                     <span className="font-sans text-xs text-[#44618b]">/person</span>
@@ -265,8 +265,8 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
       </div>
 
       {filteredCruises.length === 0 && (
-        <div className="text-center py-12 bg-white rounded-2xl border border-gray-200">
-          <Ship className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+        <div className="text-center py-12 bg-white rounded-2xl border border-[#12103d]/10">
+          <Ship className="w-12 h-12 text-[#12103d]/30 mx-auto mb-3" />
           <p className="font-sans text-[#44618b]">No cruises found matching your criteria</p>
         </div>
       )}
