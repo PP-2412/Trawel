@@ -70,14 +70,14 @@ export default function CruiseItinerary({ selectedCruise, onClose }: Props) {
     const hasHalfStar = rating % 1 !== 0
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)
+      stars.push(<Star key={i} className="w-4 h-4 fill-[#d19457] text-[#d19457]" />)
     }
     if (hasHalfStar) {
       stars.push(
         <div key="half" className="relative inline-block">
-          <Star className="w-4 h-4 text-amber-400" />
+          <Star className="w-4 h-4 text-[#d19457]" />
           <div className="absolute inset-0 overflow-hidden w-1/2">
-            <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+            <Star className="w-4 h-4 fill-[#d19457] text-[#d19457]" />
           </div>
         </div>
       )
@@ -106,7 +106,7 @@ export default function CruiseItinerary({ selectedCruise, onClose }: Props) {
 
         <div className="overflow-y-auto max-h-[calc(90vh-100px)]">
           {/* Cruise Overview */}
-          <div className="p-8 border-b border-gray-200">
+          <div className="p-8 border-b border-[#12103d]/10">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="relative w-full md:w-64 h-40 rounded-xl overflow-hidden flex-shrink-0">
                 <div 
@@ -137,7 +137,7 @@ export default function CruiseItinerary({ selectedCruise, onClose }: Props) {
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {selectedCruise.features.map((feature, idx) => (
-                    <span key={idx} className="inline-flex items-center gap-1 px-2 py-1 bg-[#f5f5f5] rounded-full font-sans text-xs text-[#12103d]">
+                    <span key={idx} className="inline-flex items-center gap-1 px-2 py-1 bg-white/95 rounded-full font-sans text-xs text-[#12103d] border border-[#12103d]/10">
                       {feature.icon} {feature.text}
                     </span>
                   ))}
@@ -147,14 +147,14 @@ export default function CruiseItinerary({ selectedCruise, onClose }: Props) {
           </div>
 
           {/* Itinerary Section */}
-          <div className="p-8 border-b border-gray-200">
+          <div className="p-8 border-b border-[#12103d]/10">
             <h3 className="font-display text-xl font-semibold text-[#12103d] mb-6 flex items-center gap-2">
               <MapPin className="w-5 h-5 text-[#43124a]" />
               Cruise Itinerary
             </h3>
 
             {/* Itinerary Table */}
-            <div className="bg-[#f5f5f5] rounded-2xl overflow-hidden">
+            <div className="bg-white/95 rounded-2xl overflow-hidden border border-[#12103d]/10">
               {/* Table Header */}
               <div className="grid grid-cols-12 gap-4 px-6 py-3 bg-gradient-to-r from-[#12103d] to-[#43124a]">
                 <div className="col-span-1 font-sans text-xs font-semibold text-white uppercase tracking-wider">Day</div>
@@ -169,7 +169,7 @@ export default function CruiseItinerary({ selectedCruise, onClose }: Props) {
                 <div
                   key={day.day}
                   className={`grid grid-cols-12 gap-4 px-6 py-4 items-center bg-white ${
-                    index !== itinerary.length - 1 ? 'border-b border-gray-200' : ''
+                    index !== itinerary.length - 1 ? 'border-b border-[#12103d]/10' : ''
                   }`}
                 >
                   <div className="col-span-1">
@@ -204,13 +204,13 @@ export default function CruiseItinerary({ selectedCruise, onClose }: Props) {
               <span className="font-sans text-xs font-normal text-[#44618b] ml-2">(Per Person)</span>
             </h3>
 
-            <div className="bg-[#f5f5f5] rounded-2xl overflow-hidden border border-gray-200">
+            <div className="bg-white/95 rounded-2xl overflow-hidden border border-[#12103d]/10">
               {/* Budget Items */}
               {budgetItems.map((item, index) => (
                 <div
                   key={item.label}
                   className={`flex items-center justify-between px-6 py-4 bg-white ${
-                    index !== budgetItems.length - 1 ? 'border-b border-gray-200' : ''
+                    index !== budgetItems.length - 1 ? 'border-b border-[#12103d]/10' : ''
                   }`}
                 >
                   <div className="flex items-center gap-3">
