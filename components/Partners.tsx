@@ -15,11 +15,11 @@ export default function Partners() {
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
         <div className="text-center">
-          <h2 className="font-display text-4xl md:text-5xl font-light text-[#2d1f4e] mb-4">
-            Our Hotel <span className="font-semibold italic text-[#5b21b6]">Partners</span>
+          <h2 className="font-display text-4xl md:text-5xl text-[#121d3d] mb-4">
+            Our Hotel <span className="font-accent text-[#d19457]">Partners</span>
           </h2>
-          <p className="font-sans text-stone-500 tracking-wider">
-            Trusted by <span className="text-[#c9a227] font-medium">World-Class</span> Hotel Brands
+          <p className="font-sans text-[#44618b] tracking-wider">
+            Trusted by <span className="text-[#d19457] font-medium">World-Class</span> Hotel Brands
           </p>
         </div>
       </div>
@@ -30,9 +30,9 @@ export default function Partners() {
           {[...hotelPartners, ...hotelPartners].map((partner, index) => (
             <div
               key={index}
-              className="flex-shrink-0 mx-4 px-12 py-8 bg-[#faf8ff] rounded-xl border border-[#ede9fe] hover:bg-[rgba(91,33,182,0.05)] transition-colors"
+              className="flex-shrink-0 mx-4 px-12 py-8 bg-[#f5f5f5] rounded-xl border border-gray-200 hover:bg-[#121d3d]/5 transition-colors"
             >
-              <span className="font-display text-xl font-medium text-stone-600 whitespace-nowrap">
+              <span className="font-display text-xl text-[#44618b] whitespace-nowrap">
                 {partner}
               </span>
             </div>
