@@ -32,27 +32,27 @@ export default function EuropeBuilder() {
   }
 
   return (
-    <section className="pt-28 pb-20 min-h-screen bg-gradient-to-b from-[#f5f3ff] to-white">
+    <section className="pt-28 pb-20 min-h-screen bg-gradient-to-b from-[#f5f5f5] to-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="font-display text-4xl md:text-6xl font-light text-[#2d1f4e] mb-4">
-            Plan Your <span className="font-semibold italic text-[#5b21b6]">Europe</span> Trip
+          <h1 className="font-display text-4xl md:text-6xl text-[#121d3d] mb-4">
+            Plan Your <span className="font-accent text-[#d19457]">Europe</span> Trip
           </h1>
-          <p className="font-sans text-stone-500 tracking-wider max-w-2xl mx-auto">
+          <p className="font-sans text-[#44618b] tracking-wider max-w-2xl mx-auto">
             Build your dream European adventure - choose from our curated packages or create your own custom itinerary
           </p>
         </div>
 
         {/* Mode Toggle */}
         <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-full p-1.5 shadow-lg border border-[#ede9fe] inline-flex">
+          <div className="bg-white rounded-full p-1.5 shadow-lg border border-gray-200 inline-flex">
             <button
               onClick={() => { setMode('custom'); setSelectedCities([]); setShowItinerary(false); }}
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-sans text-sm font-medium transition-all duration-300 ${
                 mode === 'custom'
-                  ? 'bg-[#5b21b6] text-white shadow-md'
-                  : 'text-stone-600 hover:text-[#5b21b6]'
+                  ? 'bg-[#121d3d] text-white shadow-md'
+                  : 'text-[#44618b] hover:text-[#121d3d]'
               }`}
             >
               <Sparkles className="w-4 h-4" />
@@ -62,8 +62,8 @@ export default function EuropeBuilder() {
               onClick={() => { setMode('premade'); setSelectedCities([]); setShowItinerary(false); }}
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-sans text-sm font-medium transition-all duration-300 ${
                 mode === 'premade'
-                  ? 'bg-[#5b21b6] text-white shadow-md'
-                  : 'text-stone-600 hover:text-[#5b21b6]'
+                  ? 'bg-[#121d3d] text-white shadow-md'
+                  : 'text-[#44618b] hover:text-[#121d3d]'
               }`}
             >
               <Package className="w-4 h-4" />
@@ -100,12 +100,12 @@ export default function EuropeBuilder() {
           <div className="mt-12 text-center">
             <button
               onClick={handleGenerateItinerary}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#5b21b6] to-[#7c3aed] text-white font-sans text-sm font-semibold tracking-wider uppercase px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#121d3d] to-[#43124a] text-white font-sans text-sm font-semibold tracking-wider uppercase px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <Sparkles className="w-5 h-5" />
               Generate Itinerary
             </button>
-            <p className="font-sans text-xs text-stone-400 mt-3">
+            <p className="font-sans text-xs text-[#44618b] mt-3">
               {selectedCities.length} {selectedCities.length === 1 ? 'city' : 'cities'} selected • {selectedCities.reduce((acc, c) => acc + c.nights, 0)} nights total
             </p>
           </div>
