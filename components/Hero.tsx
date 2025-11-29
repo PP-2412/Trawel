@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center relative z-10">
         <h1 className="font-display text-5xl md:text-7xl text-white mb-6">
           Discover the World in
-          <span className="block font-accent text-[#d19457] mt-2">
+          <span className="block font-display text-[#d19457] mt-2">
             Unparalleled Luxury
           </span>
         </h1>
