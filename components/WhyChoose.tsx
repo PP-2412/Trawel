@@ -35,15 +35,15 @@ const features = [
 
 export default function WhyChoose() {
   return (
-    <section className="py-24 bg-gradient-to-b from-[#f5f3ff] to-white">
+    <section className="py-24 bg-gradient-to-b from-[#f5f5f5] to-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-light text-[#2d1f4e] mb-4">
-            Why Choose <span className="font-semibold italic text-[#5b21b6]">Trawel</span>
+          <h2 className="font-display text-4xl md:text-5xl text-[#121d3d] mb-4">
+            Why Choose <span className="font-accent text-[#d19457]">Trawel</span>
           </h2>
-          <p className="font-sans text-stone-500 tracking-wider">
-            Your <span className="text-[#c9a227] font-medium">Trusted</span> Travel Partner
+          <p className="font-sans text-[#44618b] tracking-wider">
+            Your <span className="text-[#d19457] font-medium">Trusted</span> Travel Partner
           </p>
         </div>
 
@@ -52,15 +52,15 @@ export default function WhyChoose() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="feature-card bg-white rounded-2xl p-10 shadow-lg border border-[#ede9fe]"
+              className="feature-card bg-white rounded-2xl p-10 shadow-lg border border-gray-200"
             >
-              <div className="w-16 h-16 rounded-full bg-[#5b21b6] flex items-center justify-center mb-6 shadow-md">
+              <div className="w-16 h-16 rounded-full bg-[#121d3d] flex items-center justify-center mb-6 shadow-md">
                 <feature.icon className="w-7 h-7 text-white" strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-2xl font-semibold text-[#2d1f4e] mb-3">
+              <h3 className="font-display text-2xl text-[#121d3d] mb-3">
                 {feature.title}
               </h3>
-              <p className="font-sans text-sm text-stone-500 leading-relaxed">
+              <p className="font-sans text-sm text-[#44618b] leading-relaxed">
                 {feature.description}
               </p>
             </div>
