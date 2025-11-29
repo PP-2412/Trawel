@@ -35,14 +35,14 @@ const features = [
 
 export default function WhyChoose() {
   return (
-    <section className="py-24 bg-gradient-to-b from-[#f5f5f5] to-white">
+    <section className="py-24 bg-gradient-to-b from-white/95 to-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl text-[#12103d] mb-4">
             Why Choose <span className="font-accent text-[#d19457]">Trawel</span>
           </h2>
-          <p className="font-sans text-[#44618b] tracking-wider">
+          <p className="font-display text-[#44618b] tracking-wider">
             Your <span className="text-[#d19457] font-medium">Trusted</span> Travel Partner
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function WhyChoose() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="feature-card bg-white rounded-2xl p-10 shadow-lg border border-gray-200"
+              className="feature-card bg-white rounded-2xl p-10 shadow-lg border border-[#12103d]/10"
             >
               <div className="w-16 h-16 rounded-full bg-[#12103d] flex items-center justify-center mb-6 shadow-md">
                 <feature.icon className="w-7 h-7 text-white" strokeWidth={1.5} />
