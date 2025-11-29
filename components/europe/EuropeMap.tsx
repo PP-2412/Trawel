@@ -10,7 +10,7 @@ export default function EuropeMap({ selectedCities }: Props) {
   return (
     <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden sticky top-28">
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#121d3d] to-[#43124a] px-6 py-4">
+      <div className="bg-gradient-to-r from-[#12103d] to-[#43124a] px-6 py-4">
         <h2 className="font-display text-xl text-white">
           Your Route
         </h2>
@@ -163,7 +163,7 @@ export default function EuropeMap({ selectedCities }: Props) {
                   y1={city.coordinates.y}
                   x2={nextCity.coordinates.x}
                   y2={nextCity.coordinates.y}
-                  stroke="#121d3d"
+                  stroke="#12103d"
                   strokeWidth="3"
                   strokeDasharray="8,5"
                   opacity="0.5"
@@ -178,7 +178,7 @@ export default function EuropeMap({ selectedCities }: Props) {
                     markerHeight="6"
                     orient="auto"
                   >
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#121d3d" />
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#12103d" />
                   </marker>
                 </defs>
                 <line
@@ -186,7 +186,7 @@ export default function EuropeMap({ selectedCities }: Props) {
                   y1={city.coordinates.y}
                   x2={nextCity.coordinates.x}
                   y2={nextCity.coordinates.y}
-                  stroke="#121d3d"
+                  stroke="#12103d"
                   strokeWidth="2"
                   opacity="0.7"
                   markerEnd={`url(#arrow-${index})`}
@@ -204,7 +204,7 @@ export default function EuropeMap({ selectedCities }: Props) {
                 cy={city.coordinates.y}
                 r="15"
                 fill="none"
-                stroke="#121d3d"
+                stroke="#12103d"
                 strokeWidth="2"
                 opacity="0.4"
               >
@@ -218,16 +218,16 @@ export default function EuropeMap({ selectedCities }: Props) {
               {/* Map pin */}
               <g transform={`translate(${city.coordinates.x}, ${city.coordinates.y})`}>
                 <path d="M 0,-18 C -7,-18 -12,-13 -12,-6 C -12,2 0,18 0,18 C 0,18 12,2 12,-6 C 12,-13 7,-18 0,-18 Z"
-                  fill="#121d3d" stroke="white" strokeWidth="2"/>
+                  fill="#12103d" stroke="white" strokeWidth="2"/>
                 <circle cx="0" cy="-6" r="5" fill="white"/>
               </g>
               
               {/* Order number */}
-              <text x={city.coordinates.x} y={city.coordinates.y - 3} textAnchor="middle" fill="#121d3d" 
+              <text x={city.coordinates.x} y={city.coordinates.y - 3} textAnchor="middle" fill="#12103d" 
                 fontSize="14" fontWeight="bold" fontFamily="sans-serif">{index + 1}</text>
               
               {/* City name */}
-              <text x={city.coordinates.x} y={city.coordinates.y + 32} textAnchor="middle" fill="#121d3d" 
+              <text x={city.coordinates.x} y={city.coordinates.y + 32} textAnchor="middle" fill="#12103d" 
                 fontSize="12" fontWeight="600" fontFamily="sans-serif">{city.city}</text>
             </g>
           ))}
@@ -239,7 +239,7 @@ export default function EuropeMap({ selectedCities }: Props) {
             <div className="flex flex-wrap gap-2">
               {selectedCities.map((city, index) => (
                 <span key={city.id} className="inline-flex items-center gap-1.5 px-2 py-1 bg-[#f5f5f5] rounded-full font-sans text-xs">
-                  <span className="w-4 h-4 bg-[#121d3d] text-white rounded-full text-[10px] flex items-center justify-center font-bold">
+                  <span className="w-4 h-4 bg-[#12103d] text-white rounded-full text-[10px] flex items-center justify-center font-bold">
                     {index + 1}
                   </span>
                   {city.city}
