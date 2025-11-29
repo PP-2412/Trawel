@@ -39,7 +39,7 @@ export default function WhyChoose() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl text-[#121d3d] mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-[#12103d] mb-4">
             Why Choose <span className="font-accent text-[#d19457]">Trawel</span>
           </h2>
           <p className="font-sans text-[#44618b] tracking-wider">
@@ -54,10 +54,10 @@ export default function WhyChoose() {
               key={index}
               className="feature-card bg-white rounded-2xl p-10 shadow-lg border border-gray-200"
             >
-              <div className="w-16 h-16 rounded-full bg-[#121d3d] flex items-center justify-center mb-6 shadow-md">
+              <div className="w-16 h-16 rounded-full bg-[#12103d] flex items-center justify-center mb-6 shadow-md">
                 <feature.icon className="w-7 h-7 text-white" strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-2xl text-[#121d3d] mb-3">
+              <h3 className="font-display text-2xl text-[#12103d] mb-3">
                 {feature.title}
               </h3>
               <p className="font-sans text-sm text-[#44618b] leading-relaxed">
