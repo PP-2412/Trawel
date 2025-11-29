@@ -2,10 +2,10 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-[#121d3d] via-[#43124a] to-[#44618b] pt-32 pb-24 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-[#12103d] via-[#43124a] to-[#44618b] pt-32 pb-24 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-[#d19457] opacity-15 rounded-full blur-[80px]" />
-      <div className="absolute bottom-10 right-20 w-96 h-96 bg-[#8558a2] opacity-25 rounded-full blur-[100px]" />
+      <div className="absolute bottom-10 right-20 w-96 h-96 bg-[#8550a2] opacity-25 rounded-full blur-[100px]" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center relative z-10">
         <h1 className="font-display text-5xl md:text-7xl text-white mb-6">
