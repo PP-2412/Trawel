@@ -47,22 +47,43 @@ export default function Reviews() {
 
   const review = reviews[currentReview]
 
+  const renderStars = (rating: number) => {
+    const stars = []
+    const fullStars = Math.floor(rating)
+    const hasHalfStar = rating % 1 !== 0
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<Star key={i} className="w-5 h-5 fill-[#d19457] text-[#d19457]" />)
+    }
+    if (hasHalfStar) {
+      stars.push(
+        <div key="half" className="relative">
+          <Star className="w-5 h-5 text-[#d19457]" />
+          <div className="absolute inset-0 overflow-hidden w-1/2">
+            <Star className="w-5 h-5 fill-[#d19457] text-[#d19457]" />
+          </div>
+        </div>
+      )
+    }
+    return stars
+  }
+
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-[#f5f5f5]">
+    <section className="py-24 bg-gradient-to-b from-white to-white/95">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl text-[#12103d] mb-4">
             What Our <span className="font-accent text-[#d19457]">Guests</span> Say
           </h2>
-          <p className="font-sans text-[#44618b] tracking-wider">
+          <p className="font-display text-[#44618b] tracking-wider">
             Experiences that speak for themselves
           </p>
         </div>
 
         {/* Review Card */}
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl p-10 md:p-14 shadow-xl border border-gray-200 relative overflow-hidden">
+          <div className="bg-white rounded-3xl p-10 md:p-14 shadow-xl border border-[#12103d]/10 relative overflow-hidden">
             {/* Quote mark */}
             <div className="absolute top-0 right-10 text-[200px] font-display text-[#d19457] opacity-5 leading-none select-none">
               &ldquo;
@@ -70,9 +91,7 @@ export default function Reviews() {
 
             {/* Stars */}
             <div className="flex items-center gap-1 mb-6">
-              {[...Array(review.rating)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-              ))}
+              {renderStars(review.rating)}
             </div>
 
             {/* Review text */}
@@ -98,7 +117,7 @@ export default function Reviews() {
           <div className="flex justify-center gap-4 mt-10">
             <button
               onClick={prevReview}
-              className="w-14 h-14 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+              className="w-14 h-14 rounded-full bg-white shadow-lg border border-[#12103d]/10 flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 group"
               aria-label="Previous review"
             >
               <ChevronLeft className="w-6 h-6 text-[#44618b] group-hover:text-[#d19457] transition-colors" />
@@ -112,7 +131,7 @@ export default function Reviews() {
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === currentReview
                       ? 'w-8 bg-[#12103d]'
-                      : 'w-2 bg-gray-300 hover:bg-gray-400'
+                      : 'w-2 bg-[#12103d]/30 hover:bg-[#12103d]/50'
                   }`}
                   aria-label={`Go to review ${index + 1}`}
                 />
@@ -121,7 +140,7 @@ export default function Reviews() {
 
             <button
               onClick={nextReview}
-              className="w-14 h-14 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+              className="w-14 h-14 rounded-full bg-white shadow-lg border border-[#12103d]/10 flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 group"
               aria-label="Next review"
             >
               <ChevronRight className="w-6 h-6 text-[#44618b] group-hover:text-[#d19457] transition-colors" />
