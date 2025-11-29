@@ -10,7 +10,7 @@ const availableCruises: CruiseSelection[] = [
     name: 'Disney Cruise Line',
     tagline: 'Singapore - Asia Pacific Routes',
     tag: 'NEW',
-    tagColor: 'bg-[#2d1f4e] text-white',
+    tagColor: 'bg-[#12103d] text-white',
     rating: 5,
     destinations: ['Singapore', 'Malaysia', 'Thailand'],
     features: [
@@ -28,7 +28,7 @@ const availableCruises: CruiseSelection[] = [
     name: 'Royal Caribbean',
     tagline: 'Global Adventure Cruising',
     tag: 'POPULAR',
-    tagColor: 'bg-[#5b21b6] text-white',
+    tagColor: 'bg-[#43124a] text-white',
     rating: 5,
     destinations: ['Caribbean', 'Mediterranean', 'Asia'],
     features: [
@@ -46,7 +46,7 @@ const availableCruises: CruiseSelection[] = [
     name: 'Norwegian Cruise Line',
     tagline: 'Freestyle Cruising Experience',
     tag: 'FREESTYLE',
-    tagColor: 'bg-[#0ea5e9] text-white',
+    tagColor: 'bg-[#44618b] text-white',
     rating: 4.5,
     destinations: ['Alaska', 'Europe', 'Caribbean'],
     features: [
@@ -64,7 +64,7 @@ const availableCruises: CruiseSelection[] = [
     name: 'Celebrity Cruises',
     tagline: 'Modern Luxury at Sea',
     tag: 'PREMIUM',
-    tagColor: 'bg-[#7c3aed] text-white',
+    tagColor: 'bg-[#8550a2] text-white',
     rating: 5,
     destinations: ['Mediterranean', 'Alaska', 'Galapagos'],
     features: [
@@ -82,7 +82,7 @@ const availableCruises: CruiseSelection[] = [
     name: 'Cordelia Cruises',
     tagline: "India's Premium Cruise Line",
     tag: 'INDIAN',
-    tagColor: 'bg-[#f97316] text-white',
+    tagColor: 'bg-[#c77e36] text-white',
     rating: 4.5,
     destinations: ['Mumbai', 'Goa', 'Lakshadweep'],
     features: [
@@ -100,7 +100,7 @@ const availableCruises: CruiseSelection[] = [
     name: 'Genting Dream',
     tagline: 'Asian Luxury Cruising',
     tag: 'LUXURY',
-    tagColor: 'bg-[#c9a227] text-[#2d1f4e]',
+    tagColor: 'bg-[#d19457] text-[#12103d]',
     rating: 4.5,
     destinations: ['Singapore', 'Vietnam', 'Thailand'],
     features: [
@@ -157,22 +157,22 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
   return (
     <div className="space-y-6">
       {/* Search and Filter */}
-      <div className="bg-white rounded-2xl shadow-lg border border-[#ede9fe] p-4">
+      <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-4">
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#44618b]" />
             <input
               type="text"
               placeholder="Search cruises..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-[#faf8ff] border border-[#ede9fe] rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#5b21b6]/20 focus:border-[#5b21b6]"
+              className="w-full pl-10 pr-4 py-3 bg-[#f5f5f5] border border-gray-200 rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#12103d]/20 focus:border-[#12103d]"
             />
           </div>
           <select
             value={filterDestination}
             onChange={(e) => setFilterDestination(e.target.value)}
-            className="px-4 py-3 bg-[#faf8ff] border border-[#ede9fe] rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#5b21b6]/20 focus:border-[#5b21b6] min-w-[180px]"
+            className="px-4 py-3 bg-[#f5f5f5] border border-gray-200 rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#12103d]/20 focus:border-[#12103d] min-w-[180px]"
           >
             <option value="all">All Destinations</option>
             {allDestinations.map(dest => (
@@ -192,7 +192,7 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
               key={cruise.id}
               onClick={() => setSelectedCruise(cruise)}
               className={`bg-white rounded-2xl overflow-hidden shadow-lg border-2 cursor-pointer transition-all duration-300 hover:shadow-xl ${
-                isSelected ? 'border-[#5b21b6] ring-4 ring-[#5b21b6]/10' : 'border-[#ede9fe] hover:border-[#a78bfa]'
+                isSelected ? 'border-[#12103d] ring-4 ring-[#12103d]/10' : 'border-gray-200 hover:border-[#8550a2]'
               }`}
             >
               {/* Image */}
@@ -210,7 +210,7 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
 
                 {/* Selected indicator */}
                 {isSelected && (
-                  <div className="absolute top-3 left-3 w-6 h-6 bg-[#5b21b6] rounded-full flex items-center justify-center">
+                  <div className="absolute top-3 left-3 w-6 h-6 bg-[#12103d] rounded-full flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -220,8 +220,8 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="font-display text-xl font-semibold text-[#2d1f4e]">{cruise.name}</h3>
-                <p className="font-sans text-sm text-[#c9a227] font-medium mt-0.5">{cruise.tagline}</p>
+                <h3 className="font-display text-xl font-semibold text-[#12103d]">{cruise.name}</h3>
+                <p className="font-sans text-sm text-[#d19457] font-medium mt-0.5">{cruise.tagline}</p>
 
                 {/* Stars */}
                 <div className="flex items-center gap-0.5 mt-2">
@@ -230,8 +230,8 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
 
                 {/* Destinations */}
                 <div className="flex items-start gap-2 mt-3">
-                  <MapPin className="w-4 h-4 text-[#5b21b6] mt-0.5 flex-shrink-0" />
-                  <span className="font-sans text-xs text-stone-600">{cruise.destinations.join(', ')}</span>
+                  <MapPin className="w-4 h-4 text-[#43124a] mt-0.5 flex-shrink-0" />
+                  <span className="font-sans text-xs text-[#44618b]">{cruise.destinations.join(', ')}</span>
                 </div>
 
                 {/* Features */}
@@ -239,21 +239,21 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
                   {cruise.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-2">
                       <span className="text-sm">{feature.icon}</span>
-                      <span className="font-sans text-xs text-stone-600">{feature.text}</span>
+                      <span className="font-sans text-xs text-[#44618b]">{feature.text}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Price */}
-                <div className="mt-4 pt-4 border-t border-[#ede9fe] flex items-center justify-between">
+                <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-between">
                   <div>
-                    <span className="font-display text-xl font-bold text-[#c9a227]">From ${cruise.price}</span>
-                    <span className="font-sans text-xs text-stone-400">/person</span>
+                    <span className="font-display text-xl font-bold text-[#d19457]">From ${cruise.price}</span>
+                    <span className="font-sans text-xs text-[#44618b]">/person</span>
                   </div>
                   <button className={`px-5 py-2 rounded-full font-sans text-xs font-semibold transition-all duration-300 ${
                     isSelected 
-                      ? 'bg-[#5b21b6] text-white' 
-                      : 'bg-[#d4c4a8] text-[#2d1f4e] hover:bg-[#c9a227]'
+                      ? 'bg-[#12103d] text-white' 
+                      : 'bg-[#d19457] text-white hover:bg-[#c77e36]'
                   }`}>
                     {isSelected ? 'Selected' : 'Book Now'}
                   </button>
@@ -265,9 +265,9 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
       </div>
 
       {filteredCruises.length === 0 && (
-        <div className="text-center py-12 bg-white rounded-2xl border border-[#ede9fe]">
-          <Ship className="w-12 h-12 text-[#ede9fe] mx-auto mb-3" />
-          <p className="font-sans text-stone-400">No cruises found matching your criteria</p>
+        <div className="text-center py-12 bg-white rounded-2xl border border-gray-200">
+          <Ship className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+          <p className="font-sans text-[#44618b]">No cruises found matching your criteria</p>
         </div>
       )}
     </div>
