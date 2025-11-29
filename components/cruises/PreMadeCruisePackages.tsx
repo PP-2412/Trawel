@@ -15,7 +15,7 @@ const cruisePackages = [
       name: 'Disney Cruise Line',
       tagline: 'Singapore - Asia Pacific Routes',
       tag: 'NEW',
-      tagColor: 'bg-[#2d1f4e] text-white',
+      tagColor: 'bg-[#12103d] text-white',
       rating: 5,
       destinations: ['Singapore', 'Malaysia', 'Thailand'],
       features: [
@@ -41,7 +41,7 @@ const cruisePackages = [
       name: 'Celebrity Cruises',
       tagline: 'Modern Luxury at Sea',
       tag: 'PREMIUM',
-      tagColor: 'bg-[#7c3aed] text-white',
+      tagColor: 'bg-[#8550a2] text-white',
       rating: 5,
       destinations: ['Mediterranean', 'Alaska', 'Galapagos'],
       features: [
@@ -67,7 +67,7 @@ const cruisePackages = [
       name: 'Cordelia Cruises',
       tagline: "India's Premium Cruise Line",
       tag: 'INDIAN',
-      tagColor: 'bg-[#f97316] text-white',
+      tagColor: 'bg-[#c77e36] text-white',
       rating: 4.5,
       destinations: ['Mumbai', 'Goa', 'Lakshadweep'],
       features: [
@@ -93,7 +93,7 @@ const cruisePackages = [
       name: 'Royal Caribbean',
       tagline: 'Global Adventure Cruising',
       tag: 'POPULAR',
-      tagColor: 'bg-[#5b21b6] text-white',
+      tagColor: 'bg-[#43124a] text-white',
       rating: 5,
       destinations: ['Caribbean', 'Mediterranean', 'Asia'],
       features: [
@@ -126,7 +126,7 @@ export default function PreMadeCruisePackages({ selectedCruise, setSelectedCruis
 
   return (
     <div className="space-y-4">
-      <h2 className="font-display text-2xl font-semibold text-[#2d1f4e] mb-6">
+      <h2 className="font-display text-2xl font-semibold text-[#12103d] mb-6">
         Curated Cruise Packages
       </h2>
       
@@ -139,7 +139,7 @@ export default function PreMadeCruisePackages({ selectedCruise, setSelectedCruis
             key={pkg.id}
             onClick={() => selectPackage(pkg)}
             className={`relative bg-white rounded-2xl overflow-hidden shadow-lg border-2 cursor-pointer transition-all duration-300 hover:shadow-xl ${
-              isSelected ? 'border-[#5b21b6] ring-4 ring-[#5b21b6]/10' : 'border-[#ede9fe] hover:border-[#a78bfa]'
+              isSelected ? 'border-[#12103d] ring-4 ring-[#12103d]/10' : 'border-gray-200 hover:border-[#8550a2]'
             }`}
           >
             <div className="flex flex-col md:flex-row">
@@ -153,7 +153,7 @@ export default function PreMadeCruisePackages({ selectedCruise, setSelectedCruis
                 
                 {/* Tag */}
                 <span className={`absolute top-3 left-3 px-3 py-1 text-xs font-sans font-semibold rounded-full ${
-                  isSelected ? 'bg-[#5b21b6] text-white' : 'bg-[#fbbf24] text-[#2d1f4e]'
+                  isSelected ? 'bg-[#12103d] text-white' : 'bg-[#d19457] text-white'
                 }`}>
                   {pkg.tag}
                 </span>
@@ -163,24 +163,24 @@ export default function PreMadeCruisePackages({ selectedCruise, setSelectedCruis
               <div className="flex-1 p-5">
                 {/* Selected Check */}
                 {isSelected && (
-                  <div className="absolute top-4 right-4 w-8 h-8 bg-[#5b21b6] rounded-full flex items-center justify-center">
+                  <div className="absolute top-4 right-4 w-8 h-8 bg-[#12103d] rounded-full flex items-center justify-center">
                     <Check className="w-5 h-5 text-white" />
                   </div>
                 )}
 
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-[#f5f3ff] flex items-center justify-center">
-                    <IconComponent className="w-4 h-4 text-[#5b21b6]" />
+                  <div className="w-8 h-8 rounded-full bg-[#f5f5f5] flex items-center justify-center">
+                    <IconComponent className="w-4 h-4 text-[#43124a]" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-[#2d1f4e]">{pkg.name}</h3>
+                  <h3 className="font-display text-lg font-semibold text-[#12103d]">{pkg.name}</h3>
                 </div>
                 
-                <p className="font-sans text-xs text-stone-500 mb-3">{pkg.description}</p>
+                <p className="font-sans text-xs text-[#44618b] mb-3">{pkg.description}</p>
                 
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="font-sans text-sm font-medium text-[#5b21b6]">{pkg.cruise.name}</span>
-                  <span className="text-stone-300">•</span>
-                  <span className="font-sans text-xs text-stone-400">{pkg.cruise.nights} nights</span>
+                  <span className="font-sans text-sm font-medium text-[#43124a]">{pkg.cruise.name}</span>
+                  <span className="text-gray-300">•</span>
+                  <span className="font-sans text-xs text-[#44618b]">{pkg.cruise.nights} nights</span>
                 </div>
 
                 {/* Package Includes */}
@@ -188,19 +188,19 @@ export default function PreMadeCruisePackages({ selectedCruise, setSelectedCruis
                   {pkg.includes.map((item, idx) => (
                     <span
                       key={idx}
-                      className="inline-flex items-center gap-1 px-2 py-1 bg-[#f5f3ff] rounded-full font-sans text-xs text-[#5b21b6]"
+                      className="inline-flex items-center gap-1 px-2 py-1 bg-[#f5f5f5] rounded-full font-sans text-xs text-[#12103d]"
                     >
-                      <Check className="w-3 h-3" />
+                      <Check className="w-3 h-3 text-[#43124a]" />
                       {item}
                     </span>
                   ))}
                 </div>
 
                 {/* Price */}
-                <div className="mt-4 pt-3 border-t border-[#ede9fe] flex items-center justify-between">
+                <div className="mt-4 pt-3 border-t border-gray-200 flex items-center justify-between">
                   <div>
-                    <span className="font-display text-lg font-bold text-[#c9a227]">From ${pkg.cruise.price}</span>
-                    <span className="font-sans text-xs text-stone-400">/person</span>
+                    <span className="font-display text-lg font-bold text-[#d19457]">From ${pkg.cruise.price}</span>
+                    <span className="font-sans text-xs text-[#44618b]">/person</span>
                   </div>
                 </div>
               </div>
