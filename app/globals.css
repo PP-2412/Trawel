@@ -5,13 +5,12 @@
 @tailwind utilities;
 
 :root {
-  --primary-blue: #121d3d;
+  --primary-blue: #12103d;
   --accent-gold: #d19457;
   --white: #ffffff;
   --black: #000000;
-  --supporting-green: #238c33;
   --supporting-purple-dark: #43124a;
-  --supporting-purple-light: #8558a2;
+  --supporting-purple-light: #8550a2;
   --supporting-blue: #44618b;
   --supporting-orange: #c77e36;
 }
