@@ -14,14 +14,14 @@ export default function CruiseDetails({ selectedCruise }: Props) {
     const hasHalfStar = rating % 1 !== 0
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)
+      stars.push(<Star key={i} className="w-4 h-4 fill-[#d19457] text-[#d19457]" />)
     }
     if (hasHalfStar) {
       stars.push(
         <div key="half" className="relative">
-          <Star className="w-4 h-4 text-amber-400" />
+          <Star className="w-4 h-4 text-[#d19457]" />
           <div className="absolute inset-0 overflow-hidden w-1/2">
-            <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+            <Star className="w-4 h-4 fill-[#d19457] text-[#d19457]" />
           </div>
         </div>
       )
@@ -30,7 +30,7 @@ export default function CruiseDetails({ selectedCruise }: Props) {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden sticky top-28">
+    <div className="bg-white rounded-2xl shadow-lg border border-[#12103d]/10 overflow-hidden sticky top-28">
       {/* Header */}
       <div className="bg-gradient-to-r from-[#12103d] to-[#43124a] px-6 py-4">
         <h2 className="font-display text-xl font-semibold text-white flex items-center gap-2">
@@ -73,7 +73,7 @@ export default function CruiseDetails({ selectedCruise }: Props) {
 
           {/* Details List */}
           <div className="space-y-3">
-            <div className="flex items-start gap-3 p-3 bg-[#f5f5f5] rounded-xl">
+            <div className="flex items-start gap-3 p-3 bg-white/95 rounded-xl border border-[#12103d]/10">
               <MapPin className="w-5 h-5 text-[#43124a] flex-shrink-0" />
               <div>
                 <p className="font-sans text-xs text-[#44618b] uppercase tracking-wider">Destinations</p>
@@ -81,7 +81,7 @@ export default function CruiseDetails({ selectedCruise }: Props) {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-3 bg-[#f5f5f5] rounded-xl">
+            <div className="flex items-start gap-3 p-3 bg-white/95 rounded-xl border border-[#12103d]/10">
               <Calendar className="w-5 h-5 text-[#43124a] flex-shrink-0" />
               <div>
                 <p className="font-sans text-xs text-[#44618b] uppercase tracking-wider">Duration</p>
@@ -89,7 +89,7 @@ export default function CruiseDetails({ selectedCruise }: Props) {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-3 bg-[#f5f5f5] rounded-xl">
+            <div className="flex items-start gap-3 p-3 bg-white/95 rounded-xl border border-[#12103d]/10">
               <Anchor className="w-5 h-5 text-[#43124a] flex-shrink-0" />
               <div>
                 <p className="font-sans text-xs text-[#44618b] uppercase tracking-wider">Departure Port</p>
@@ -99,7 +99,7 @@ export default function CruiseDetails({ selectedCruise }: Props) {
           </div>
 
           {/* Features */}
-          <div className="mt-4 pt-4 border-t border-gray-200">
+          <div className="mt-4 pt-4 border-t border-[#12103d]/10">
             <p className="font-sans text-xs text-[#44618b] uppercase tracking-wider mb-3">Highlights</p>
             <div className="space-y-2">
               {selectedCruise.features.map((feature, idx) => (
@@ -112,7 +112,7 @@ export default function CruiseDetails({ selectedCruise }: Props) {
           </div>
 
           {/* Price Summary */}
-          <div className="mt-6 p-4 bg-gradient-to-r from-[#12103d]/10 to-[#43124a]/10 rounded-xl">
+          <div className="mt-6 p-4 bg-gradient-to-r from-[#12103d]/10 to-[#43124a]/10 rounded-xl border border-[#12103d]/10">
             <div className="flex items-center justify-between">
               <span className="font-sans text-sm text-[#44618b]">Starting from</span>
               <div className="text-right">
@@ -125,7 +125,7 @@ export default function CruiseDetails({ selectedCruise }: Props) {
         </div>
       ) : (
         <div className="px-6 py-16 text-center">
-          <Ship className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+          <Ship className="w-16 h-16 text-[#12103d]/30 mx-auto mb-4" />
           <p className="font-sans text-[#44618b] text-sm">Browse our cruise options and select one to see full details here</p>
         </div>
       )}
