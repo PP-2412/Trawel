@@ -30,9 +30,9 @@ export default function CruiseDetails({ selectedCruise }: Props) {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-[#ede9fe] overflow-hidden sticky top-28">
+    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden sticky top-28">
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#5b21b6] to-[#7c3aed] px-6 py-4">
+      <div className="bg-gradient-to-r from-[#12103d] to-[#43124a] px-6 py-4">
         <h2 className="font-display text-xl font-semibold text-white flex items-center gap-2">
           <Ship className="w-5 h-5" />
           Cruise Details
@@ -68,65 +68,65 @@ export default function CruiseDetails({ selectedCruise }: Props) {
             <div className="flex items-center gap-0.5">
               {renderStars(selectedCruise.rating)}
             </div>
-            <span className="font-sans text-xs text-stone-500">({selectedCruise.rating} rating)</span>
+            <span className="font-sans text-xs text-[#44618b]">({selectedCruise.rating} rating)</span>
           </div>
 
           {/* Details List */}
           <div className="space-y-3">
-            <div className="flex items-start gap-3 p-3 bg-[#faf8ff] rounded-xl">
-              <MapPin className="w-5 h-5 text-[#5b21b6] flex-shrink-0" />
+            <div className="flex items-start gap-3 p-3 bg-[#f5f5f5] rounded-xl">
+              <MapPin className="w-5 h-5 text-[#43124a] flex-shrink-0" />
               <div>
-                <p className="font-sans text-xs text-stone-400 uppercase tracking-wider">Destinations</p>
-                <p className="font-sans text-sm text-[#2d1f4e] font-medium">{selectedCruise.destinations.join(' → ')}</p>
+                <p className="font-sans text-xs text-[#44618b] uppercase tracking-wider">Destinations</p>
+                <p className="font-sans text-sm text-[#12103d] font-medium">{selectedCruise.destinations.join(' → ')}</p>
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-3 bg-[#faf8ff] rounded-xl">
-              <Calendar className="w-5 h-5 text-[#5b21b6] flex-shrink-0" />
+            <div className="flex items-start gap-3 p-3 bg-[#f5f5f5] rounded-xl">
+              <Calendar className="w-5 h-5 text-[#43124a] flex-shrink-0" />
               <div>
-                <p className="font-sans text-xs text-stone-400 uppercase tracking-wider">Duration</p>
-                <p className="font-sans text-sm text-[#2d1f4e] font-medium">{selectedCruise.nights} Nights / {selectedCruise.nights + 1} Days</p>
+                <p className="font-sans text-xs text-[#44618b] uppercase tracking-wider">Duration</p>
+                <p className="font-sans text-sm text-[#12103d] font-medium">{selectedCruise.nights} Nights / {selectedCruise.nights + 1} Days</p>
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-3 bg-[#faf8ff] rounded-xl">
-              <Anchor className="w-5 h-5 text-[#5b21b6] flex-shrink-0" />
+            <div className="flex items-start gap-3 p-3 bg-[#f5f5f5] rounded-xl">
+              <Anchor className="w-5 h-5 text-[#43124a] flex-shrink-0" />
               <div>
-                <p className="font-sans text-xs text-stone-400 uppercase tracking-wider">Departure Port</p>
-                <p className="font-sans text-sm text-[#2d1f4e] font-medium">{selectedCruise.departurePort}</p>
+                <p className="font-sans text-xs text-[#44618b] uppercase tracking-wider">Departure Port</p>
+                <p className="font-sans text-sm text-[#12103d] font-medium">{selectedCruise.departurePort}</p>
               </div>
             </div>
           </div>
 
           {/* Features */}
-          <div className="mt-4 pt-4 border-t border-[#ede9fe]">
-            <p className="font-sans text-xs text-stone-400 uppercase tracking-wider mb-3">Highlights</p>
+          <div className="mt-4 pt-4 border-t border-gray-200">
+            <p className="font-sans text-xs text-[#44618b] uppercase tracking-wider mb-3">Highlights</p>
             <div className="space-y-2">
               {selectedCruise.features.map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-2">
                   <span className="text-base">{feature.icon}</span>
-                  <span className="font-sans text-sm text-stone-600">{feature.text}</span>
+                  <span className="font-sans text-sm text-[#44618b]">{feature.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Price Summary */}
-          <div className="mt-6 p-4 bg-gradient-to-r from-[#5b21b6]/10 to-[#7c3aed]/10 rounded-xl">
+          <div className="mt-6 p-4 bg-gradient-to-r from-[#12103d]/10 to-[#43124a]/10 rounded-xl">
             <div className="flex items-center justify-between">
-              <span className="font-sans text-sm text-stone-600">Starting from</span>
+              <span className="font-sans text-sm text-[#44618b]">Starting from</span>
               <div className="text-right">
-                <span className="font-display text-2xl font-bold text-[#5b21b6]">${selectedCruise.price}</span>
-                <span className="font-sans text-xs text-stone-400">/person</span>
+                <span className="font-display text-2xl font-bold text-[#d19457]">${selectedCruise.price}</span>
+                <span className="font-sans text-xs text-[#44618b]">/person</span>
               </div>
             </div>
-            <p className="font-sans text-xs text-stone-400 mt-2">* Price excludes taxes and port fees</p>
+            <p className="font-sans text-xs text-[#44618b] mt-2">* Price excludes taxes and port fees</p>
           </div>
         </div>
       ) : (
         <div className="px-6 py-16 text-center">
-          <Ship className="w-16 h-16 text-[#ede9fe] mx-auto mb-4" />
-          <p className="font-sans text-stone-400 text-sm">Browse our cruise options and select one to see full details here</p>
+          <Ship className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+          <p className="font-sans text-[#44618b] text-sm">Browse our cruise options and select one to see full details here</p>
         </div>
       )}
     </div>
