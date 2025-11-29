@@ -52,7 +52,7 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-[#f5f5f5]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl text-[#121d3d] mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-[#12103d] mb-4">
             Get in <span className="font-accent text-[#d19457]">Touch</span>
           </h2>
           <p className="font-sans text-[#44618b] tracking-wider">
@@ -67,11 +67,11 @@ export default function Contact() {
               className="contact-card bg-white rounded-xl p-5 shadow-md border-l-4 border-l-[#d19457]"
             >
               <div className="flex flex-col gap-3">
-                <div className="w-10 h-10 rounded-lg bg-[#121d3d]/10 flex items-center justify-center flex-shrink-0">
-                  <info.icon className="w-5 h-5 text-[#121d3d]" />
+                <div className="w-10 h-10 rounded-lg bg-[#12103d]/10 flex items-center justify-center flex-shrink-0">
+                  <info.icon className="w-5 h-5 text-[#12103d]" />
                 </div>
                 <div>
-                  <h3 className="font-display text-lg text-[#121d3d] mb-2">
+                  <h3 className="font-display text-lg text-[#12103d] mb-2">
                     {info.title}
                   </h3>
                   <div className="font-sans text-xs text-[#44618b] leading-relaxed">
