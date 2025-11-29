@@ -124,7 +124,7 @@ export default function CruiseSelector({ selectedCruise, setSelectedCruise }: Pr
   const [searchQuery, setSearchQuery] = useState('')
   const [filterDestination, setFilterDestination] = useState<string>('all')
 
-  const allDestinations = [...new Set(availableCruises.flatMap(c => c.destinations))]
+  const allDestinations = Array.from(new Set(availableCruises.flatMap(c => c.destinations)))
 
   const filteredCruises = availableCruises.filter(cruise => {
     const matchesSearch = cruise.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
