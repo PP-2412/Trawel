@@ -48,23 +48,23 @@ export default function Reviews() {
   const review = reviews[currentReview]
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-[#f5f3ff]">
+    <section className="py-24 bg-gradient-to-b from-white to-[#f5f5f5]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-light text-[#2d1f4e] mb-4">
-            What Our <span className="font-semibold italic text-[#5b21b6]">Guests</span> Say
+          <h2 className="font-display text-4xl md:text-5xl text-[#121d3d] mb-4">
+            What Our <span className="font-accent text-[#d19457]">Guests</span> Say
           </h2>
-          <p className="font-sans text-stone-500 tracking-wider">
+          <p className="font-sans text-[#44618b] tracking-wider">
             Experiences that speak for themselves
           </p>
         </div>
 
         {/* Review Card */}
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl p-10 md:p-14 shadow-xl border border-[#ede9fe] relative overflow-hidden">
+          <div className="bg-white rounded-3xl p-10 md:p-14 shadow-xl border border-gray-200 relative overflow-hidden">
             {/* Quote mark */}
-            <div className="absolute top-0 right-10 text-[200px] font-display text-[#5b21b6] opacity-5 leading-none select-none">
+            <div className="absolute top-0 right-10 text-[200px] font-display text-[#d19457] opacity-5 leading-none select-none">
               &ldquo;
             </div>
 
@@ -76,20 +76,20 @@ export default function Reviews() {
             </div>
 
             {/* Review text */}
-            <p className="font-display text-2xl md:text-3xl font-light leading-relaxed mb-10 text-stone-700 italic">
+            <p className="font-sans text-2xl md:text-3xl leading-relaxed mb-10 text-[#121d3d] italic">
               &ldquo;{review.text}&rdquo;
             </p>
 
             {/* Author */}
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-[#5b21b6] flex items-center justify-center text-white font-sans font-semibold text-lg">
+              <div className="w-14 h-14 rounded-full bg-[#121d3d] flex items-center justify-center text-white font-sans font-semibold text-lg">
                 {review.avatar}
               </div>
               <div>
-                <h4 className="font-display text-xl font-semibold text-[#2d1f4e]">
+                <h4 className="font-display text-xl text-[#121d3d]">
                   {review.name}
                 </h4>
-                <p className="font-sans text-sm text-stone-500">{review.location}</p>
+                <p className="font-sans text-sm text-[#44618b]">{review.location}</p>
               </div>
             </div>
           </div>
@@ -98,10 +98,10 @@ export default function Reviews() {
           <div className="flex justify-center gap-4 mt-10">
             <button
               onClick={prevReview}
-              className="w-14 h-14 rounded-full bg-white shadow-lg border border-[#ede9fe] flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+              className="w-14 h-14 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 group"
               aria-label="Previous review"
             >
-              <ChevronLeft className="w-6 h-6 text-stone-400 group-hover:text-[#5b21b6] transition-colors" />
+              <ChevronLeft className="w-6 h-6 text-[#44618b] group-hover:text-[#d19457] transition-colors" />
             </button>
 
             <div className="flex items-center gap-2">
@@ -111,8 +111,8 @@ export default function Reviews() {
                   onClick={() => setCurrentReview(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     index === currentReview
-                      ? 'w-8 bg-[#5b21b6]'
-                      : 'w-2 bg-stone-300 hover:bg-stone-400'
+                      ? 'w-8 bg-[#121d3d]'
+                      : 'w-2 bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to review ${index + 1}`}
                 />
@@ -121,10 +121,10 @@ export default function Reviews() {
 
             <button
               onClick={nextReview}
-              className="w-14 h-14 rounded-full bg-white shadow-lg border border-[#ede9fe] flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+              className="w-14 h-14 rounded-full bg-white shadow-lg border border-gray-200 flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 group"
               aria-label="Next review"
             >
-              <ChevronRight className="w-6 h-6 text-stone-400 group-hover:text-[#5b21b6] transition-colors" />
+              <ChevronRight className="w-6 h-6 text-[#44618b] group-hover:text-[#d19457] transition-colors" />
             </button>
           </div>
         </div>
