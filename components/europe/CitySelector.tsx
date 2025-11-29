@@ -65,7 +65,7 @@ export default function CitySelector({ selectedCities, setSelectedCities }: Prop
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-lg border border-[#12103d]/10 overflow-hidden">
       {/* Header */}
       <div className="bg-gradient-to-r from-[#12103d] to-[#43124a] px-6 py-4">
         <h2 className="font-display text-xl font-semibold text-white flex items-center gap-2">
@@ -75,7 +75,7 @@ export default function CitySelector({ selectedCities, setSelectedCities }: Prop
       </div>
 
       {/* Search */}
-      <div className="p-4 border-b border-gray-200">
+      <div className="p-4 border-b border-[#12103d]/10">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#44618b]" />
           <input
@@ -83,7 +83,7 @@ export default function CitySelector({ selectedCities, setSelectedCities }: Prop
             placeholder="Search cities..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 bg-[#f5f5f5] border border-gray-200 rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#12103d]/20 focus:border-[#12103d]"
+            className="w-full pl-10 pr-4 py-3 bg-white/95 border border-[#12103d]/10 rounded-xl font-sans text-sm focus:outline-none focus:ring-2 focus:ring-[#12103d]/20 focus:border-[#12103d]"
           />
         </div>
 
@@ -95,7 +95,7 @@ export default function CitySelector({ selectedCities, setSelectedCities }: Prop
                 <button
                   key={city.id}
                   onClick={() => addCity(city)}
-                  className="w-full flex items-center gap-3 px-3 py-2 hover:bg-[#f5f5f5] rounded-lg transition-colors text-left"
+                  className="w-full flex items-center gap-3 px-3 py-2 hover:bg-white/95 rounded-lg transition-colors text-left border border-transparent hover:border-[#12103d]/10"
                 >
                   <span className="text-xs font-sans font-medium text-[#44618b] w-6">{city.countryCode}</span>
                   <span className="font-sans text-sm text-[#12103d]">{city.city}</span>
@@ -114,7 +114,7 @@ export default function CitySelector({ selectedCities, setSelectedCities }: Prop
       {selectedCities.length > 0 ? (
         <div>
           {/* Table Header */}
-          <div className="grid grid-cols-12 gap-4 px-6 py-3 bg-gradient-to-r from-[#12103d]/10 to-[#43124a]/10 border-b border-gray-200">
+          <div className="grid grid-cols-12 gap-4 px-6 py-3 bg-gradient-to-r from-[#12103d]/10 to-[#43124a]/10 border-b border-[#12103d]/10">
             <div className="col-span-5 font-sans text-xs font-semibold text-[#12103d] uppercase tracking-wider">City</div>
             <div className="col-span-4 font-sans text-xs font-semibold text-[#12103d] uppercase tracking-wider text-center">Nights</div>
             <div className="col-span-3 font-sans text-xs font-semibold text-[#12103d] uppercase tracking-wider text-center">Action</div>
@@ -125,7 +125,7 @@ export default function CitySelector({ selectedCities, setSelectedCities }: Prop
             <div
               key={city.id}
               className={`grid grid-cols-12 gap-4 px-6 py-4 items-center ${
-                index !== selectedCities.length - 1 ? 'border-b border-gray-200' : ''
+                index !== selectedCities.length - 1 ? 'border-b border-[#12103d]/10' : ''
               }`}
             >
               <div className="col-span-5 flex items-center gap-2">
@@ -135,7 +135,7 @@ export default function CitySelector({ selectedCities, setSelectedCities }: Prop
               <div className="col-span-4 flex items-center justify-center gap-3">
                 <button
                   onClick={() => updateNights(city.id, -1)}
-                  className="w-8 h-8 rounded-full bg-gray-200 text-[#12103d] flex items-center justify-center hover:bg-[#12103d] hover:text-white transition-colors"
+                  className="w-8 h-8 rounded-full bg-[#12103d]/10 text-[#12103d] flex items-center justify-center hover:bg-[#12103d] hover:text-white transition-colors"
                 >
                   <Minus className="w-4 h-4" />
                 </button>
@@ -160,7 +160,7 @@ export default function CitySelector({ selectedCities, setSelectedCities }: Prop
         </div>
       ) : (
         <div className="px-6 py-12 text-center">
-          <MapPin className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+          <MapPin className="w-12 h-12 text-[#12103d]/30 mx-auto mb-3" />
           <p className="font-sans text-[#44618b] text-sm">Search and add cities to build your itinerary</p>
         </div>
       )}
