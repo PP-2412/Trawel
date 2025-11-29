@@ -28,7 +28,7 @@ export default function Navbar() {
               Europe
             </Link>
             <Link 
-              href="#cruises" 
+              href="/cruises" 
               className="nav-link font-sans text-xs font-medium tracking-[2px] uppercase text-stone-700 hover:text-[#5b21b6] transition-colors flex items-center gap-2"
             >
               <Anchor className="w-4 h-4" />
