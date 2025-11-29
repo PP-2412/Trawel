@@ -9,19 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        purple: {
-          dark: '#5b21b6',
-          medium: '#7c3aed',
-          light: '#a78bfa',
+        primary: {
+          blue: '#121d3d',
         },
-        gold: {
-          DEFAULT: '#c9a227',
-          light: '#d4af37',
+        accent: {
+          gold: '#d19457',
+        },
+        supporting: {
+          green: '#238c33',
+          'purple-dark': '#43124a',
+          'purple-light': '#8558a2',
+          blue: '#44618b',
+          orange: '#c77e36',
         },
       },
       fontFamily: {
-        display: ['Cormorant Garamond', 'Georgia', 'serif'],
-        sans: ['Montserrat', 'sans-serif'],
+        display: ['Belleza', 'sans-serif'],
+        sans: ['B612', 'Calibri', 'sans-serif'],
+        accent: ['Gistesy', 'cursive'],
       },
       animation: {
         scroll: 'scroll 30s linear infinite',
