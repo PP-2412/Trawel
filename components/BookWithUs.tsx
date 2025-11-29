@@ -27,7 +27,7 @@ export default function BookWithUs() {
     <section id="book-with-us" className="py-24 bg-gradient-to-b from-white to-[#f5f5f5]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl text-[#121d3d] mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-[#12103d] mb-4">
             Book With <span className="font-accent text-[#d19457]">Us</span>
           </h2>
           <p className="font-sans text-[#44618b] tracking-wider">
@@ -46,7 +46,7 @@ export default function BookWithUs() {
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url(${option.image})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121d3d]/80 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#12103d]/80 to-transparent" />
                 <div className="absolute bottom-4 left-6 flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                     <option.icon className="w-6 h-6 text-white" />
@@ -65,7 +65,7 @@ export default function BookWithUs() {
                   {option.destinations.map((dest, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-[#f5f5f5] text-[#121d3d] font-sans text-xs rounded-full"
+                      className="px-3 py-1 bg-[#f5f5f5] text-[#12103d] font-sans text-xs rounded-full"
                     >
                       {dest}
                     </span>
