@@ -72,7 +72,7 @@ export default function BookWithUs() {
                   ))}
                 </div>
                 <Link
-                  href={option.id === 'europe' ? '/europe' : `#${option.id}`}
+                  href={option.id === 'europe' ? '/europe' : `/cruises`}
                   className="inline-flex items-center gap-2 font-sans text-sm font-medium text-[#5b21b6] hover:text-[#7c3aed] transition-colors group/btn"
                 >
                   Explore {option.title}
