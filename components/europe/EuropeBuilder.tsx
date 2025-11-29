@@ -36,7 +36,7 @@ export default function EuropeBuilder() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="font-display text-4xl md:text-6xl text-[#121d3d] mb-4">
+          <h1 className="font-display text-4xl md:text-6xl text-[#12103d] mb-4">
             Plan Your <span className="font-accent text-[#d19457]">Europe</span> Trip
           </h1>
           <p className="font-sans text-[#44618b] tracking-wider max-w-2xl mx-auto">
@@ -51,8 +51,8 @@ export default function EuropeBuilder() {
               onClick={() => { setMode('custom'); setSelectedCities([]); setShowItinerary(false); }}
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-sans text-sm font-medium transition-all duration-300 ${
                 mode === 'custom'
-                  ? 'bg-[#121d3d] text-white shadow-md'
-                  : 'text-[#44618b] hover:text-[#121d3d]'
+                  ? 'bg-[#12103d] text-white shadow-md'
+                  : 'text-[#44618b] hover:text-[#12103d]'
               }`}
             >
               <Sparkles className="w-4 h-4" />
@@ -62,8 +62,8 @@ export default function EuropeBuilder() {
               onClick={() => { setMode('premade'); setSelectedCities([]); setShowItinerary(false); }}
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-sans text-sm font-medium transition-all duration-300 ${
                 mode === 'premade'
-                  ? 'bg-[#121d3d] text-white shadow-md'
-                  : 'text-[#44618b] hover:text-[#121d3d]'
+                  ? 'bg-[#12103d] text-white shadow-md'
+                  : 'text-[#44618b] hover:text-[#12103d]'
               }`}
             >
               <Package className="w-4 h-4" />
@@ -100,7 +100,7 @@ export default function EuropeBuilder() {
           <div className="mt-12 text-center">
             <button
               onClick={handleGenerateItinerary}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#121d3d] to-[#43124a] text-white font-sans text-sm font-semibold tracking-wider uppercase px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#12103d] to-[#43124a] text-white font-sans text-sm font-semibold tracking-wider uppercase px-10 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <Sparkles className="w-5 h-5" />
               Generate Itinerary
