@@ -24,13 +24,13 @@ const bookingOptions = [
 
 export default function BookWithUs() {
   return (
-    <section id="book-with-us" className="py-24 bg-gradient-to-b from-white to-[#f5f5f5]">
+    <section id="book-with-us" className="py-24 bg-gradient-to-b from-white to-white/95">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl text-[#12103d] mb-4">
             Book With <span className="font-accent text-[#d19457]">Us</span>
           </h2>
-          <p className="font-sans text-[#44618b] tracking-wider">
+          <p className="font-display text-[#44618b] tracking-wider">
             Choose your <span className="text-[#d19457] font-medium">Dream</span> Destination
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function BookWithUs() {
           {bookingOptions.map((option) => (
             <div
               key={option.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-[#12103d]/10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
             >
               <div className="relative h-48 overflow-hidden">
                 <div 
@@ -65,7 +65,7 @@ export default function BookWithUs() {
                   {option.destinations.map((dest, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-[#f5f5f5] text-[#12103d] font-sans text-xs rounded-full"
+                      className="px-3 py-1 bg-white/95 text-[#12103d] font-sans text-xs rounded-full border border-[#12103d]/10"
                     >
                       {dest}
                     </span>
