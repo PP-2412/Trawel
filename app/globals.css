@@ -9,6 +9,7 @@
   --accent-gold: #d19457;
   --white: #ffffff;
   --black: #000000;
+  --supporting-darkest: #230c33;
   --supporting-purple-dark: #43124a;
   --supporting-purple-light: #8550a2;
   --supporting-blue: #44618b;
@@ -59,7 +60,7 @@ body {
 
 .feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 48px rgba(18, 29, 61, 0.12);
+  box-shadow: 0 24px 48px rgba(18, 16, 61, 0.12);
 }
 
 /* Partners scroll animation */
@@ -96,7 +97,7 @@ body {
 }
 
 .contact-card:hover {
-  box-shadow: 0 12px 40px rgba(18, 29, 61, 0.12);
+  box-shadow: 0 12px 40px rgba(18, 16, 61, 0.12);
 }
 
 /* Smooth scrolling */
