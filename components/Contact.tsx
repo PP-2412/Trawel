@@ -17,7 +17,7 @@ const contactInfo = [
     icon: Mail,
     title: 'Email Us',
     content: (
-      <a href="mailto:hello@trawel.com" className="hover:text-[#5b21b6] transition-colors">
+      <a href="mailto:hello@trawel.com" className="hover:text-[#d19457] transition-colors">
         hello@trawel.com
       </a>
     ),
@@ -26,7 +26,7 @@ const contactInfo = [
     icon: Phone,
     title: 'Call Us',
     content: (
-      <a href="tel:+917022702220" className="hover:text-[#5b21b6] transition-colors">
+      <a href="tel:+917022702220" className="hover:text-[#d19457] transition-colors">
         +91 7022 7022 20
       </a>
     ),
@@ -49,13 +49,13 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-[#f5f3ff]">
+    <section id="contact" className="py-20 bg-[#f5f5f5]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl font-light text-[#2d1f4e] mb-4">
-            Get in <span className="font-semibold italic text-[#5b21b6]">Touch</span>
+          <h2 className="font-display text-4xl md:text-5xl text-[#121d3d] mb-4">
+            Get in <span className="font-accent text-[#d19457]">Touch</span>
           </h2>
-          <p className="font-sans text-stone-500 tracking-wider">
+          <p className="font-sans text-[#44618b] tracking-wider">
             We&apos;re here to help plan your perfect journey
           </p>
         </div>
@@ -64,17 +64,17 @@ export default function Contact() {
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className="contact-card bg-white rounded-xl p-5 shadow-md border-l-4 border-l-[#5b21b6]"
+              className="contact-card bg-white rounded-xl p-5 shadow-md border-l-4 border-l-[#d19457]"
             >
               <div className="flex flex-col gap-3">
-                <div className="w-10 h-10 rounded-lg bg-[rgba(91,33,182,0.1)] flex items-center justify-center flex-shrink-0">
-                  <info.icon className="w-5 h-5 text-[#5b21b6]" />
+                <div className="w-10 h-10 rounded-lg bg-[#121d3d]/10 flex items-center justify-center flex-shrink-0">
+                  <info.icon className="w-5 h-5 text-[#121d3d]" />
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-[#2d1f4e] mb-2">
+                  <h3 className="font-display text-lg text-[#121d3d] mb-2">
                     {info.title}
                   </h3>
-                  <div className="font-sans text-xs text-stone-600 leading-relaxed">
+                  <div className="font-sans text-xs text-[#44618b] leading-relaxed">
                     {info.content}
                   </div>
                 </div>
