@@ -10,11 +10,11 @@ const packages = [
     duration: '10 Nights',
     tag: 'Most Popular',
     cities: [
-      { id: 'paris', city: 'Paris', country: 'France', countryCode: 'FR', nights: 3, coordinates: { x: 240, y: 280 } },
-      { id: 'amsterdam', city: 'Amsterdam', country: 'Netherlands', countryCode: 'NL', nights: 2, coordinates: { x: 290, y: 200 } },
-      { id: 'brussels', city: 'Brussels', country: 'Belgium', countryCode: 'BE', nights: 1, coordinates: { x: 280, y: 220 } },
-      { id: 'zurich', city: 'Zurich', country: 'Switzerland', countryCode: 'CH', nights: 2, coordinates: { x: 360, y: 290 } },
-      { id: 'rome', city: 'Rome', country: 'Italy', countryCode: 'IT', nights: 2, coordinates: { x: 420, y: 380 } },
+      { id: 'paris', city: 'Paris', country: 'France', countryCode: 'FR', nights: 3, coordinates: { x: 324.4, y: 399.2 } },
+      { id: 'amsterdam', city: 'Amsterdam', country: 'Netherlands', countryCode: 'NL', nights: 2, coordinates: { x: 361.0, y: 351.4 } },
+      { id: 'brussels', city: 'Brussels', country: 'Belgium', countryCode: 'BE', nights: 1, coordinates: { x: 352.9, y: 373.2 } },
+      { id: 'zurich', city: 'Zurich', country: 'Switzerland', countryCode: 'CH', nights: 2, coordinates: { x: 412.2, y: 423.8 } },
+      { id: 'rome', city: 'Rome', country: 'Italy', countryCode: 'IT', nights: 2, coordinates: { x: 485.3, y: 491.2 } },
     ],
   },
   {
@@ -23,9 +23,9 @@ const packages = [
     duration: '8 Nights',
     tag: 'Honeymoon Special',
     cities: [
-      { id: 'paris', city: 'Paris', country: 'France', countryCode: 'FR', nights: 3, coordinates: { x: 240, y: 280 } },
-      { id: 'venice', city: 'Venice', country: 'Italy', countryCode: 'IT', nights: 2, coordinates: { x: 420, y: 310 } },
-      { id: 'santorini', city: 'Santorini', country: 'Greece', countryCode: 'GR', nights: 3, coordinates: { x: 570, y: 450 } },
+      { id: 'paris', city: 'Paris', country: 'France', countryCode: 'FR', nights: 3, coordinates: { x: 324.4, y: 399.2 } },
+      { id: 'venice', city: 'Venice', country: 'Italy', countryCode: 'IT', nights: 2, coordinates: { x: 466.3, y: 450.8 } },
+      { id: 'santorini', city: 'Santorini', country: 'Greece', countryCode: 'GR', nights: 3, coordinates: { x: 684.4, y: 569.9 } },
     ],
   },
   {
@@ -34,10 +34,10 @@ const packages = [
     duration: '9 Nights',
     tag: 'Sun & Sea',
     cities: [
-      { id: 'barcelona', city: 'Barcelona', country: 'Spain', countryCode: 'ES', nights: 3, coordinates: { x: 180, y: 340 } },
-      { id: 'nice', city: 'Nice', country: 'France', countryCode: 'FR', nights: 2, coordinates: { x: 310, y: 330 } },
-      { id: 'florence', city: 'Florence', country: 'Italy', countryCode: 'IT', nights: 2, coordinates: { x: 400, y: 350 } },
-      { id: 'rome', city: 'Rome', country: 'Italy', countryCode: 'IT', nights: 2, coordinates: { x: 420, y: 380 } },
+      { id: 'barcelona', city: 'Barcelona', country: 'Spain', countryCode: 'ES', nights: 3, coordinates: { x: 321.8, y: 499.0 } },
+      { id: 'nice', city: 'Nice', country: 'France', countryCode: 'FR', nights: 2, coordinates: { x: 394.6, y: 475.3 } },
+      { id: 'florence', city: 'Florence', country: 'Italy', countryCode: 'IT', nights: 2, coordinates: { x: 454.5, y: 474.5 } },
+      { id: 'rome', city: 'Rome', country: 'Italy', countryCode: 'IT', nights: 2, coordinates: { x: 485.3, y: 491.2 } },
     ],
   },
   {
@@ -46,10 +46,34 @@ const packages = [
     duration: '7 Nights',
     tag: 'Culture & History',
     cities: [
-      { id: 'berlin', city: 'Berlin', country: 'Germany', countryCode: 'DE', nights: 2, coordinates: { x: 410, y: 200 } },
-      { id: 'prague', city: 'Prague', country: 'Czech Republic', countryCode: 'CZ', nights: 2, coordinates: { x: 440, y: 240 } },
-      { id: 'vienna', city: 'Vienna', country: 'Austria', countryCode: 'AT', nights: 2, coordinates: { x: 450, y: 280 } },
-      { id: 'munich', city: 'Munich', country: 'Germany', countryCode: 'DE', nights: 1, coordinates: { x: 400, y: 280 } },
+      { id: 'berlin', city: 'Berlin', country: 'Germany', countryCode: 'DE', nights: 2, coordinates: { x: 511.9, y: 348.9 } },
+      { id: 'prague', city: 'Prague', country: 'Czech Republic', countryCode: 'CZ', nights: 2, coordinates: { x: 526.9, y: 383.9 } },
+      { id: 'vienna', city: 'Vienna', country: 'Austria', countryCode: 'AT', nights: 2, coordinates: { x: 554.5, y: 412.0 } },
+      { id: 'munich', city: 'Munich', country: 'Germany', countryCode: 'DE', nights: 1, coordinates: { x: 466.0, y: 413.1 } },
+    ],
+  },
+  {
+    id: 'iberian-adventure',
+    name: 'Iberian Adventure',
+    duration: '9 Nights',
+    tag: 'Spain & Portugal',
+    cities: [
+      { id: 'lisbon', city: 'Lisbon', country: 'Portugal', countryCode: 'PT', nights: 3, coordinates: { x: 174.8, y: 536.6 } },
+      { id: 'porto', city: 'Porto', country: 'Portugal', countryCode: 'PT', nights: 2, coordinates: { x: 182.3, y: 502.2 } },
+      { id: 'madrid', city: 'Madrid', country: 'Spain', countryCode: 'ES', nights: 2, coordinates: { x: 251.9, y: 512.4 } },
+      { id: 'barcelona', city: 'Barcelona', country: 'Spain', countryCode: 'ES', nights: 2, coordinates: { x: 321.8, y: 499.0 } },
+    ],
+  },
+  {
+    id: 'nordic-wonders',
+    name: 'Nordic Wonders',
+    duration: '8 Nights',
+    tag: 'Scandinavian',
+    cities: [
+      { id: 'copenhagen', city: 'Copenhagen', country: 'Denmark', countryCode: 'DK', nights: 2, coordinates: { x: 486.8, y: 299.8 } },
+      { id: 'stockholm', city: 'Stockholm', country: 'Sweden', countryCode: 'SE', nights: 2, coordinates: { x: 578.5, y: 253.1 } },
+      { id: 'oslo', city: 'Oslo', country: 'Norway', countryCode: 'NO', nights: 2, coordinates: { x: 453.8, y: 244.9 } },
+      { id: 'bergen', city: 'Bergen', country: 'Norway', countryCode: 'NO', nights: 2, coordinates: { x: 366.8, y: 237.9 } },
     ],
   },
 ]
